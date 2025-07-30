@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './InterventionZones.module.css';
 
 function InterventionZones() {
   const zones = [
@@ -12,14 +13,18 @@ function InterventionZones() {
   ];
 
   return (
-    <section className="intervention-zones">
+    <section className={`${styles.section} fade-in`}>
       <div className="container">
-        <h2>Zone d'intervention</h2>
-        <ul className="zones-list">
-          {zones.map((zone, index) => (
-            <li key={index}>{zone}</li>
-          ))}
-        </ul>
+        <h2 className={styles.title}>Zone d'intervention</h2>
+        <div className={styles.zonesContainer}>
+          <ul className={styles.zonesList}>
+            {zones.map((zone, index) => (
+              <li key={index} className={styles.zoneItem}>
+                <span className={styles.zoneText}>{zone}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </section>
   );

@@ -1,0 +1,136 @@
+.section {
+  background-color: #ffffff;
+}
+
+.title {
+  font-size: 2rem;
+  color: #1e293b;
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3rem;
+  height: 3px;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  border-radius: 2px;
+}
+
+.hoursCard {
+  max-width: 500px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  border: 1px solid #e2e8f0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hoursCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6, #06b6d4);
+}
+
+.clockIcon {
+  width: 3rem;
+  height: 3rem;
+  color: #3b82f6;
+  margin: 0 auto 1.5rem;
+  display: block;
+}
+
+.mainHours {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.hoursInfo p {
+  margin-bottom: 0.75rem;
+  color: #475569;
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+.hoursInfo p:last-child {
+  margin-bottom: 0;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.highlight {
+  color: #3b82f6;
+  font-weight: 600;
+}
+
+/* Mobile Styles */
+@media (max-width: 640px) {
+  .title {
+    font-size: 1.75rem;
+  }
+  
+  .hoursCard {
+    padding: 1.5rem;
+  }
+  
+  .mainHours {
+    font-size: 1.25rem;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  
+  .clockIcon {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  
+  .hoursInfo p {
+    font-size: 1rem;
+  }
+}
+
+/* Tablet Styles */
+@media (min-width: 641px) and (max-width: 1023px) {
+  .title {
+    font-size: 1.875rem;
+  }
+  
+  .mainHours {
+    font-size: 1.375rem;
+  }
+}
+
+/* Desktop Styles */
+@media (min-width: 1024px) {
+  .hoursCard {
+    padding: 2.5rem;
+  }
+  
+  .mainHours {
+    font-size: 1.75rem;
+  }
+  
+  .clockIcon {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+}

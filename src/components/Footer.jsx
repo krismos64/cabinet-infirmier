@@ -1,14 +1,20 @@
 import React from 'react';
+import styles from './Footer.module.css';
 
 function Footer() {
   return (
-    <footer className="footer">
+    <footer className={styles.footer}>
       <div className="container">
-        <p>&copy; {new Date().getFullYear()} Cabinet Infirmier Graslin - Nantes</p>
-        <p>
-          <a href="#mentions-legales">Mentions légales</a> | 
-          <a href="#protection-donnees"> Protection des données</a>
-        </p>
+        <div className={styles.footerContent}>
+          <p className={styles.copyright}>
+            &copy; {new Date().getFullYear()} Cabinet Infirmier Graslin - Nantes
+          </p>
+          <div className={styles.links}>
+            <a href="#mentions-legales" className={styles.link}>Mentions légales</a>
+            <span className={styles.separator}>|</span>
+            <a href="#protection-donnees" className={styles.link}>Protection des données</a>
+          </div>
+        </div>
       </div>
     </footer>
   );

@@ -1,0 +1,110 @@
+.section {
+  background-color: #ffffff;
+}
+
+.title {
+  font-size: 2rem;
+  color: #1e293b;
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3rem;
+  height: 3px;
+  background: linear-gradient(90deg, #10b981, #059669);
+  border-radius: 2px;
+}
+
+.accessibilityCard {
+  max-width: 600px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #ecfdf5 0%, #ffffff 100%);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  border: 1px solid #d1fae5;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.accessibilityCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #10b981, #059669);
+}
+
+.accessibilityIcon {
+  width: 3rem;
+  height: 3rem;
+  color: #10b981;
+  margin: 0 auto 1.5rem;
+  display: block;
+}
+
+.accessibilityText {
+  font-size: 1.25rem;
+  color: #1e293b;
+  line-height: 1.7;
+  margin: 0;
+  font-weight: 500;
+}
+
+.highlight {
+  color: #10b981;
+  font-weight: 600;
+}
+
+/* Mobile Styles */
+@media (max-width: 640px) {
+  .title {
+    font-size: 1.75rem;
+  }
+  
+  .accessibilityCard {
+    padding: 1.5rem;
+  }
+  
+  .accessibilityIcon {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  
+  .accessibilityText {
+    font-size: 1.125rem;
+  }
+}
+
+/* Tablet Styles */
+@media (min-width: 641px) and (max-width: 1023px) {
+  .title {
+    font-size: 1.875rem;
+  }
+}
+
+/* Desktop Styles */
+@media (min-width: 1024px) {
+  .accessibilityCard {
+    padding: 2.5rem;
+  }
+  
+  .accessibilityIcon {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+  
+  .accessibilityText {
+    font-size: 1.375rem;
+  }
+}
