@@ -7,6 +7,7 @@ import {
   ContactInfo,
   Accessibility,
   InterventionZones,
+  CTA,
   LegalDisclaimer,
   Footer
 } from './components';
@@ -23,6 +24,7 @@ function App() {
         <ContactInfo />
         <Accessibility />
         <InterventionZones />
+        <CTA />
         <LegalDisclaimer />
       </main>
       <Footer />

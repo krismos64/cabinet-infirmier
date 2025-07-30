@@ -15,11 +15,14 @@ function InterventionZones() {
   return (
     <section className={`${styles.section} fade-in`}>
       <div className="container">
-        <h2 className={styles.title}>Zone d'intervention</h2>
+        <h2 className={`${styles.title} scale-in`}>Zone d'intervention</h2>
         <div className={styles.zonesContainer}>
           <ul className={styles.zonesList}>
             {zones.map((zone, index) => (
-              <li key={index} className={styles.zoneItem}>
+              <li 
+                key={index} 
+                className={`${styles.zoneItem} scale-in stagger-${Math.min(index + 1, 6)} hover-lift touch-feedback`}
+              >
                 <span className={styles.zoneText}>{zone}</span>
               </li>
             ))}

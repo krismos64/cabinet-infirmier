@@ -51,6 +51,15 @@
   color: #3b82f6;
   margin: 0 auto 1.5rem;
   display: block;
+  animation: pulse 2s infinite;
+  transition: all 0.3s ease;
+}
+
+@media (hover: hover) {
+  .hoursCard:hover .clockIcon {
+    animation: bounce 1s ease;
+    color: #8b5cf6;
+  }
 }
 
 .mainHours {

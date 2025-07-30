@@ -5,10 +5,10 @@ function OpeningHours() {
   return (
     <section className={`${styles.section} fade-in`}>
       <div className="container">
-        <h2 className={styles.title}>Horaires d'ouverture</h2>
-        <div className={styles.hoursCard}>
+        <h2 className={`${styles.title} scale-in`}>Horaires d'ouverture</h2>
+        <div className={`${styles.hoursCard} scale-in stagger-1 hover-lift touch-feedback`}>
           <svg 
-            className={styles.clockIcon}
+            className={`${styles.clockIcon} scale-in stagger-2`}
             xmlns="http://www.w3.org/2000/svg" 
             width="24" 
             height="24" 
@@ -24,11 +24,11 @@ function OpeningHours() {
             <polyline points="12,6 12,12 16,14"/>
           </svg>
           <div className={styles.hoursInfo}>
-            <p className={styles.mainHours}>
+            <p className={`${styles.mainHours} fade-in stagger-3`}>
               <span className={styles.highlight}>Du lundi au dimanche : 7h - 20h</span>
             </p>
-            <p>Y compris les jours fériés</p>
-            <p>Soins sur rendez-vous à domicile ou au cabinet</p>
+            <p className={`fade-in stagger-4`}>Y compris les jours fériés</p>
+            <p className={`fade-in stagger-5`}>Soins sur rendez-vous à domicile ou au cabinet</p>
           </div>
         </div>
       </div>
