@@ -1,8 +1,14 @@
 .hero {
-  padding: 2rem 0;
-  background: linear-gradient(135deg, #fefefe 0%, #f0f9ff 30%, #e0f2fe 70%, #fefefe 100%);
+  padding: 3rem 0;
+  background: 
+    radial-gradient(circle at 25% 25%, rgba(252, 231, 243, 0.4) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(243, 232, 255, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(249, 168, 212, 0.2) 0%, transparent 60%),
+    linear-gradient(135deg, #fdf2f8 0%, #fce7f3 25%, #f3e8ff 50%, #fce7f3 75%, #fdf2f8 100%);
   position: relative;
   overflow: hidden;
+  background-size: 400% 400%;
+  animation: morphBackground 12s ease-in-out infinite;
 }
 
 .hero::after {
@@ -12,9 +18,9 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle at 20% 50%, rgba(14, 165, 233, 0.08) 0%, transparent 60%),
-              radial-gradient(circle at 80% 20%, rgba(56, 189, 248, 0.06) 0%, transparent 60%),
-              radial-gradient(circle at 60% 80%, rgba(2, 132, 199, 0.04) 0%, transparent 50%);
+  background: radial-gradient(circle at 20% 50%, rgba(217, 119, 6, 0.08) 0%, transparent 60%),
+              radial-gradient(circle at 80% 20%, rgba(252, 231, 243, 0.12) 0%, transparent 60%),
+              radial-gradient(circle at 60% 80%, rgba(245, 158, 11, 0.06) 0%, transparent 50%);
   pointer-events: none;
 }
 
@@ -25,7 +31,7 @@
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent, #e2e8f0, transparent);
+  background: linear-gradient(90deg, transparent, #f59e0b, transparent);
 }
 
 .heroContent {
@@ -49,16 +55,66 @@
   font-style: normal;
   font-weight: 500;
   font-size: 1.25rem;
-  color: #1e293b;
-  margin-bottom: 1.5rem;
+  color: #2d3748;
+  margin-bottom: 2rem;
   line-height: 1.6;
-  padding: 2rem;
-  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
-  border-radius: 16px;
-  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  border-left: 4px solid #3b82f6;
+  padding: 2.5rem;
+  background: 
+    radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.8) 0%, transparent 40%),
+    radial-gradient(circle at 80% 80%, rgba(252, 231, 243, 0.6) 0%, transparent 40%),
+    linear-gradient(135deg, rgba(252, 231, 243, 0.9) 0%, rgba(243, 232, 255, 0.8) 50%, rgba(252, 231, 243, 0.9) 100%);
+  border-radius: 24px;
+  box-shadow: 
+    0 20px 40px rgba(252, 231, 243, 0.4),
+    0 8px 16px rgba(249, 168, 212, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  border: 2px solid rgba(249, 168, 212, 0.3);
+  border-left: 6px solid #d97706;
   position: relative;
   overflow: hidden;
+  backdrop-filter: blur(10px);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.heroAddress:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 
+    0 25px 50px rgba(252, 231, 243, 0.5),
+    0 12px 20px rgba(249, 168, 212, 0.3);
+}
+
+.addressHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.addressDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.wellnessIcon, .sparkleIcon, .locationIcon, .heartIcon, .leafIcon {
+  font-size: 1.5rem;
+  animation: sparkle 3s ease-in-out infinite;
+}
+
+.wellnessIcon {
+  animation-delay: 0s;
+}
+
+.sparkleIcon {
+  animation-delay: 1s;
+}
+
+.heartIcon {
+  animation-delay: 2s;
+}
+
+.leafIcon {
+  animation-delay: 0.5s;
 }
 
 .heroAddress::before {
@@ -68,7 +124,7 @@
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(90deg, #0ea5e9, #38bdf8, #0284c7, #0ea5e9);
+  background: linear-gradient(90deg, #d97706, #f59e0b, #fbbf24, #d97706);
   background-size: 200% 100%;
   animation: shimmer 3s ease-in-out infinite;
 }
@@ -79,13 +135,13 @@
 }
 
 .heroAddress strong {
-  color: #1e293b;
+  color: #4a4a4a;
   font-weight: 700;
   font-size: 1.375rem;
 }
 
 .location {
-  background: linear-gradient(135deg, #0ea5e9, #38bdf8);
+  background: linear-gradient(135deg, #d97706, #f59e0b);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -93,14 +149,80 @@
   font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  text-shadow: 0 0 10px rgba(14, 165, 233, 0.3);
+  text-shadow: 0 0 10px rgba(217, 119, 6, 0.3);
 }
 
 .heroDescription {
   font-size: 1.125rem;
   line-height: 1.7;
-  color: #475569;
+  color: #6b7280;
+  margin-bottom: 1.5rem;
+}
+
+.paymentInfo {
+  background: 
+    radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.7) 0%, transparent 40%),
+    linear-gradient(135deg, rgba(252, 231, 243, 0.8) 0%, rgba(243, 232, 255, 0.7) 50%, rgba(252, 231, 243, 0.8) 100%);
+  padding: 2rem;
+  border-radius: 20px;
+  border: 2px solid rgba(249, 168, 212, 0.3);
+  border-left: 6px solid #d97706;
+  box-shadow: 
+    0 12px 24px rgba(252, 231, 243, 0.4),
+    0 4px 8px rgba(249, 168, 212, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
   margin-bottom: 0;
+  backdrop-filter: blur(8px);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.paymentInfo:hover {
+  transform: translateY(-1px);
+  box-shadow: 
+    0 16px 32px rgba(252, 231, 243, 0.5),
+    0 6px 12px rgba(249, 168, 212, 0.3);
+}
+
+.paymentHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.paymentIcon, .checkIcon, .cashIcon, .noCardIcon {
+  font-size: 1.3rem;
+  animation: sparkle 4s ease-in-out infinite;
+}
+
+.paymentIcon {
+  animation-delay: 0s;
+}
+
+.checkIcon {
+  animation-delay: 1.5s;
+}
+
+.cashIcon {
+  animation-delay: 0.7s;
+}
+
+.noCardIcon {
+  animation-delay: 2.2s;
+}
+
+.paymentInfo p {
+  margin: 0;
+  font-size: 1.125rem;
+  color: #4a4a4a;
+  font-weight: 500;
+  text-align: center;
+}
+
+.paymentInfo strong {
+  color: #d97706;
 }
 
 .heroImage {
@@ -119,22 +241,89 @@
 }
 
 .mapContainer {
-  border-radius: 12px;
+  border-radius: 24px;
   overflow: hidden;
-  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 
+    0 12px 24px rgba(252, 231, 243, 0.4),
+    0 4px 8px rgba(249, 168, 212, 0.2);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  cursor: pointer;
+  border: 2px solid rgba(249, 168, 212, 0.3);
 }
 
 .mapContainer:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 
+    0 20px 40px rgba(252, 231, 243, 0.5),
+    0 8px 16px rgba(249, 168, 212, 0.3);
+  border-color: rgba(249, 168, 212, 0.5);
+}
+
+.mapOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg, 
+    rgba(252, 231, 243, 0.9) 0%, 
+    rgba(243, 232, 255, 0.8) 100%
+  );
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 2;
+}
+
+.mapContainer:hover .mapOverlay {
+  opacity: 1;
+}
+
+.gpsPrompt {
+  text-align: center;
+  color: #2d3748;
+  padding: 1.5rem;
+  background: 
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, transparent 60%),
+    linear-gradient(135deg, rgba(252, 231, 243, 0.9) 0%, rgba(243, 232, 255, 0.9) 100%);
+  border-radius: 20px;
+  box-shadow: 
+    0 8px 16px rgba(252, 231, 243, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(249, 168, 212, 0.3);
+  animation: breathe 2s ease-in-out infinite;
+}
+
+.gpsPrompt p {
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.gpsPrompt strong {
+  color: #d97706;
+  font-size: 1.1rem;
+}
+
+.gpsIcon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 0.5rem;
+  animation: float 3s ease-in-out infinite;
 }
 
 .mapContainer iframe {
   width: 100%;
-  height: 250px;
+  height: 280px;
   border: 0;
   display: block;
+  position: relative;
+  z-index: 1;
 }
 
 /* Tablet Styles */

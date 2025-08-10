@@ -46,9 +46,9 @@ function Header() {
               <span className={styles.emoji}>📞</span>
               <span className={styles.contactText}>02 40 77 73 81</span>
             </a>
-            <a href="mailto:contact@cabinet-graslin.fr" className={`${styles.contactItem} ${styles.email} touch-feedback`}>
+            <a href="mailto:infirmiere.cabinet.le.heron@gmail.com" className={`${styles.contactItem} ${styles.email} touch-feedback`}>
               <span className={styles.emoji}>✉️</span>
-              <span className={styles.contactText}>contact@cabinet-graslin.fr</span>
+              <span className={styles.contactText}>infirmiere.cabinet.le.heron@gmail.com</span>
             </a>
             <div className={`${styles.contactItem} ${styles.address}`}>
               <span className={styles.emoji}>📍</span>

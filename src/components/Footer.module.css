@@ -1,6 +1,6 @@
 .footer {
-  background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
-  color: #ffffff;
+  background: linear-gradient(135deg, #7c2d12 0%, #9a3412 50%, #b45309 100%);
+  color: #fdf2f8;
   padding: 2.5rem 0 2rem;
   text-align: center;
   position: relative;
@@ -14,7 +14,7 @@
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, #3b82f6, #8b5cf6, #06b6d4);
+  background: linear-gradient(90deg, #d97706, #f59e0b, #fbbf24);
 }
 
 .footerContent {
@@ -26,7 +26,7 @@
 
 .copyright {
   font-size: 1rem;
-  color: #cbd5e1;
+  color: #fce7f3;
   margin: 0;
   font-weight: 400;
 }
@@ -40,7 +40,7 @@
 }
 
 .link {
-  color: #e2e8f0;
+  color: #fce7f3;
   text-decoration: none;
   font-size: 0.875rem;
   transition: color 0.2s ease, transform 0.2s ease;
@@ -49,17 +49,17 @@
 }
 
 .link:hover {
-  color: #ffffff;
+  color: #fbbf24;
   transform: translateY(-1px);
 }
 
 .link:focus {
-  outline: 2px solid #3b82f6;
+  outline: 2px solid #fbbf24;
   outline-offset: 2px;
 }
 
 .separator {
-  color: #64748b;
+  color: #fce7f3;
   font-size: 0.875rem;
   user-select: none;
 }

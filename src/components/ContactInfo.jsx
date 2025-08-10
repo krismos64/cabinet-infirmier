@@ -51,15 +51,15 @@ function ContactInfo() {
               <h3 className={`${styles.contactTitle} fade-in stagger-4`}>Email</h3>
             </div>
             <a
-              href="mailto:contact@cabinet-graslin.fr"
+              href="mailto:infirmiere.cabinet.le.heron@gmail.com"
               className={`${styles.contactLink} fade-in stagger-5 touch-feedback`}
             >
-              contact@cabinet-graslin.fr
+              infirmiere.cabinet.le.heron@gmail.com
             </a>
             <div className={`${styles.emailNote} fade-in stagger-6`}>
               <p>
-                Remarque : Les emails sont traités par fusion mail pour une
-                meilleure organisation
+                <strong>Paiements acceptés :</strong> Espèces et chèques uniquement.
+                <br />Pas de carte bancaire.
               </p>
             </div>
           </div>
