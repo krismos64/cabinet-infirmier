@@ -33,7 +33,7 @@ function CTA() {
               </svg>
               Appeler maintenant
             </a>
-            <a href="mailto:contact@cabinet-graslin.fr" className={`${styles.ctaButtonSecondary} scale-in stagger-4 touch-feedback`}>
+            <a href="mailto:infirmiere.cabinet.le.heron@gmail.com" className={`${styles.ctaButtonSecondary} scale-in stagger-4 touch-feedback`}>
               <svg 
                 className={styles.ctaIcon}
                 xmlns="http://www.w3.org/2000/svg" 
