@@ -10,7 +10,8 @@ import {
   CTA,
   LegalDisclaimer,
   Footer,
-  MobileNavigation
+  MobileNavigation,
+  FloatingElements
 } from './components';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
 
   return (
     <>
+      <FloatingElements />
       <Header />
       <MobileNavigation />
       <main>

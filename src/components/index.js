@@ -11,3 +11,4 @@ export { default as LoadingSpinner } from './LoadingSpinner';
 export { default as MobileNavigation } from './MobileNavigation';
 export { default as ParallaxBackground } from './ParallaxBackground';
 export { default as LoadingScreen } from './LoadingScreen';
+export { default as FloatingElements } from './FloatingElements';

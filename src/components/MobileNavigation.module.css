@@ -228,6 +228,20 @@
   box-shadow: 
     0 6px 20px rgba(252, 231, 243, 0.4),
     0 2px 8px rgba(249, 168, 212, 0.3);
+  animation: navItemGlow 2s ease-in-out infinite;
+}
+
+@keyframes navItemGlow {
+  0%, 100% {
+    box-shadow: 
+      0 6px 20px rgba(252, 231, 243, 0.4),
+      0 2px 8px rgba(249, 168, 212, 0.3);
+  }
+  50% {
+    box-shadow: 
+      0 8px 25px rgba(252, 231, 243, 0.5),
+      0 4px 12px rgba(249, 168, 212, 0.4);
+  }
 }
 
 .navLink.active {
@@ -241,10 +255,36 @@
   font-size: 1.3rem;
   margin-right: 1rem;
   transition: transform 0.3s ease;
+  animation: iconIdle 4s ease-in-out infinite;
 }
 
 .navLink:hover .navIcon {
   transform: scale(1.2) rotate(10deg);
+  animation: iconExcited 1s ease-in-out infinite;
+}
+
+@keyframes iconIdle {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-1px);
+  }
+}
+
+@keyframes iconExcited {
+  0%, 100% {
+    transform: scale(1.2) rotate(10deg);
+  }
+  25% {
+    transform: scale(1.3) rotate(-5deg);
+  }
+  50% {
+    transform: scale(1.25) rotate(15deg);
+  }
+  75% {
+    transform: scale(1.35) rotate(5deg);
+  }
 }
 
 .navLabel {
@@ -367,14 +407,38 @@
   animation: fabPulse 2s ease-in-out infinite;
 }
 
+.fab::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120%;
+  height: 120%;
+  border: 2px solid rgba(34, 197, 94, 0.4);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  animation: fabRing 3s ease-in-out infinite;
+}
+
 @keyframes fabPulse {
   0%, 100% {
     transform: translate(-50%, -50%) scale(1);
-    opacity: 1;
+    opacity: 0.8;
   }
   50% {
-    transform: translate(-50%, -50%) scale(1.5);
+    transform: translate(-50%, -50%) scale(1.8);
     opacity: 0;
+  }
+}
+
+@keyframes fabRing {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.4);
+    opacity: 0.2;
   }
 }
 

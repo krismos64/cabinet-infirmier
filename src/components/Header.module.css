@@ -54,6 +54,21 @@
   left: -100%;
   width: 100%;
   height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s ease;
+}
+
+.contactItem:hover::before {
+  left: 100%;
+}
+
+.contactItem::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
   transition: left 0.6s ease;
 }
@@ -76,6 +91,17 @@
   box-shadow: 
     0 6px 20px rgba(252, 231, 243, 0.4),
     0 2px 8px rgba(249, 168, 212, 0.3);
+  animation: gentleFloat 3s ease-in-out infinite;
+}
+
+.phone:hover {
+  background: rgba(34, 197, 94, 0.2);
+  border-color: rgba(34, 197, 94, 0.4);
+}
+
+.email:hover {
+  background: rgba(59, 130, 246, 0.2);
+  border-color: rgba(59, 130, 246, 0.4);
 }
 
 .email:hover {
@@ -87,6 +113,27 @@
 .emoji {
   font-size: 1.125rem;
   line-height: 1;
+  transition: transform 0.3s ease;
+}
+
+.contactItem:hover .emoji {
+  transform: scale(1.2) rotate(5deg);
+  animation: emojiDance 1s ease-in-out;
+}
+
+@keyframes emojiDance {
+  0%, 100% {
+    transform: scale(1.2) rotate(5deg);
+  }
+  25% {
+    transform: scale(1.3) rotate(-5deg);
+  }
+  50% {
+    transform: scale(1.25) rotate(8deg);
+  }
+  75% {
+    transform: scale(1.28) rotate(-3deg);
+  }
 }
 
 .contactText {
@@ -150,6 +197,44 @@
 
 .title:hover {
   background-position: 100% 0;
+  animation: titlePulse 2s ease-in-out infinite;
+}
+
+.title::after {
+  content: '✨';
+  position: absolute;
+  top: -0.5rem;
+  right: -1rem;
+  font-size: 1rem;
+  opacity: 0;
+  transform: scale(0.5) rotate(0deg);
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.title:hover::after {
+  opacity: 1;
+  transform: scale(1) rotate(360deg);
+  animation: sparkle 2s ease-in-out infinite;
+}
+
+@keyframes titlePulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+}
+
+@keyframes sparkle {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.2) rotate(180deg);
+  }
 }
 
 .title::before {

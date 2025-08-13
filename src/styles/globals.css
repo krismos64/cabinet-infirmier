@@ -379,22 +379,57 @@ p {
 .stagger-5 { transition-delay: 0.5s; }
 .stagger-6 { transition-delay: 0.6s; }
 
-/* Subtle Background Animation */
+/* Enhanced Background Animation */
 body {
-  background-size: 200% 200%;
+  background-size: 400% 400%;
   animation: gentleShift 30s ease-in-out infinite;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(217, 119, 6, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(252, 231, 243, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 60% 60%, rgba(249, 168, 212, 0.04) 0%, transparent 40%);
+  pointer-events: none;
+  z-index: -1;
+  animation: floatingOrbs 45s ease-in-out infinite;
 }
 
 @keyframes gentleShift {
   0%, 100% {
     background-position: 0% 50%;
   }
-  50% {
-    background-position: 100% 50%;
+  33% {
+    background-position: 100% 25%;
+  }
+  66% {
+    background-position: 50% 100%;
   }
 }
 
-/* Refined hover states */
+@keyframes floatingOrbs {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-20px) rotate(1deg);
+  }
+  50% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  75% {
+    transform: translateY(-10px) rotate(-1deg);
+  }
+}
+
+/* Enhanced hover states with micro-animations */
 @media (hover: hover) {
   .hover-lift:hover {
     transform: translateY(-6px) scale(1.02);
@@ -403,6 +438,7 @@ body {
       0 15px 35px rgba(252, 231, 243, 0.4),
       0 8px 16px rgba(249, 168, 212, 0.2);
     filter: brightness(1.05);
+    animation: gentleFloat 3s ease-in-out infinite;
   }
   
   .hover-scale:hover {
@@ -411,6 +447,7 @@ body {
     box-shadow: 
       0 12px 25px rgba(252, 231, 243, 0.3),
       0 6px 12px rgba(249, 168, 212, 0.2);
+    animation: subtlePulse 2s ease-in-out infinite;
   }
   
   .hover-glow:hover {
@@ -419,6 +456,63 @@ body {
       0 0 40px rgba(249, 168, 212, 0.4);
     transform: scale(1.03);
     transition: all 0.3s ease;
+    animation: gentleGlow 2.5s ease-in-out infinite;
+  }
+  
+  .hover-shimmer:hover {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .hover-shimmer:hover::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    animation: shimmer 1.5s ease-out;
+  }
+}
+
+@keyframes gentleFloat {
+  0%, 100% {
+    transform: translateY(-6px) scale(1.02);
+  }
+  50% {
+    transform: translateY(-8px) scale(1.025);
+  }
+}
+
+@keyframes subtlePulse {
+  0%, 100% {
+    transform: scale(1.05);
+  }
+  50% {
+    transform: scale(1.06);
+  }
+}
+
+@keyframes gentleGlow {
+  0%, 100% {
+    box-shadow: 
+      0 0 20px rgba(252, 231, 243, 0.6),
+      0 0 40px rgba(249, 168, 212, 0.4);
+  }
+  50% {
+    box-shadow: 
+      0 0 25px rgba(252, 231, 243, 0.8),
+      0 0 50px rgba(249, 168, 212, 0.6);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
   }
 }
 
