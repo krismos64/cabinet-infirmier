@@ -1,0 +1,326 @@
+.parallaxContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  pointer-events: none;
+  z-index: -1;
+  overflow: hidden;
+}
+
+/* Floating Medical Elements */
+.floatingElement {
+  position: absolute;
+  pointer-events: none;
+  will-change: transform;
+}
+
+.medicalIcon {
+  font-size: 2rem;
+  opacity: 0.3;
+  filter: none;
+  animation: gentleFloat 6s ease-in-out infinite;
+}
+
+.element1 {
+  top: 10%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.element2 {
+  top: 20%;
+  right: 15%;
+  animation-delay: 1s;
+}
+
+.element3 {
+  top: 60%;
+  left: 5%;
+  animation-delay: 2s;
+}
+
+.element4 {
+  top: 40%;
+  right: 8%;
+  animation-delay: 3s;
+}
+
+.element5 {
+  top: 75%;
+  right: 25%;
+  animation-delay: 4s;
+}
+
+@keyframes gentleFloat {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg) scale(1);
+    opacity: 0.4;
+  }
+  25% {
+    transform: translateY(-15px) rotate(2deg) scale(1.05);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateY(-8px) rotate(-1deg) scale(0.95);
+    opacity: 0.6;
+  }
+  75% {
+    transform: translateY(-20px) rotate(3deg) scale(1.1);
+    opacity: 0.8;
+  }
+}
+
+/* Morphing Background Shapes */
+.morphShape {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(252, 231, 243, 0.1) 0%, transparent 70%);
+  will-change: transform;
+  animation: morphShape 20s ease-in-out infinite;
+}
+
+.shape1 {
+  width: 300px;
+  height: 300px;
+  top: 15%;
+  left: 20%;
+  background: radial-gradient(
+    circle,
+    rgba(252, 231, 243, 0.4) 0%,
+    rgba(243, 232, 255, 0.3) 50%,
+    transparent 80%
+  );
+  animation-delay: 0s;
+}
+
+.shape2 {
+  width: 200px;
+  height: 200px;
+  top: 45%;
+  right: 10%;
+  background: radial-gradient(
+    circle,
+    rgba(249, 168, 212, 0.3) 0%,
+    rgba(252, 231, 243, 0.2) 60%,
+    transparent 85%
+  );
+  animation-delay: 5s;
+}
+
+.shape3 {
+  width: 400px;
+  height: 400px;
+  top: 65%;
+  left: 40%;
+  background: radial-gradient(
+    circle,
+    rgba(243, 232, 255, 0.25) 0%,
+    rgba(252, 231, 243, 0.2) 40%,
+    transparent 75%
+  );
+  animation-delay: 10s;
+}
+
+@keyframes morphShape {
+  0%, 100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    transform: rotate(0deg) scale(1);
+  }
+  20% {
+    border-radius: 30% 70% 60% 40% / 40% 60% 30% 70%;
+    transform: rotate(72deg) scale(1.1);
+  }
+  40% {
+    border-radius: 70% 30% 40% 60% / 30% 70% 40% 60%;
+    transform: rotate(144deg) scale(0.9);
+  }
+  60% {
+    border-radius: 40% 60% 70% 30% / 70% 40% 60% 30%;
+    transform: rotate(216deg) scale(1.05);
+  }
+  80% {
+    border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+    transform: rotate(288deg) scale(0.95);
+  }
+}
+
+/* Gradient Orbs */
+.gradientOrb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.5;
+  will-change: transform;
+  animation: orbFloat 15s ease-in-out infinite;
+}
+
+.orb1 {
+  width: 150px;
+  height: 150px;
+  top: 25%;
+  left: 60%;
+  background: radial-gradient(
+    circle,
+    rgba(217, 119, 6, 0.3) 0%,
+    rgba(245, 158, 11, 0.2) 50%,
+    transparent 80%
+  );
+  animation-delay: 0s;
+}
+
+.orb2 {
+  width: 120px;
+  height: 120px;
+  top: 70%;
+  left: 15%;
+  background: radial-gradient(
+    circle,
+    rgba(249, 168, 212, 0.4) 0%,
+    rgba(252, 231, 243, 0.2) 50%,
+    transparent 80%
+  );
+  animation-delay: 7s;
+}
+
+@keyframes orbFloat {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+    opacity: 0.6;
+  }
+  33% {
+    transform: translateY(-30px) scale(1.2);
+    opacity: 0.8;
+  }
+  66% {
+    transform: translateY(-15px) scale(0.8);
+    opacity: 0.4;
+  }
+}
+
+/* Particle System */
+.particleSystem {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: radial-gradient(circle, rgba(217, 119, 6, 0.8) 0%, transparent 70%);
+  border-radius: 50%;
+  will-change: transform;
+  animation: particleFloat 8s ease-in-out infinite;
+}
+
+.particle1 { top: 10%; left: 20%; animation-delay: 0s; }
+.particle2 { top: 25%; left: 80%; animation-delay: 0.5s; }
+.particle3 { top: 35%; left: 15%; animation-delay: 1s; }
+.particle4 { top: 45%; left: 70%; animation-delay: 1.5s; }
+.particle5 { top: 55%; left: 30%; animation-delay: 2s; }
+.particle6 { top: 65%; left: 85%; animation-delay: 2.5s; }
+.particle7 { top: 75%; left: 10%; animation-delay: 3s; }
+.particle8 { top: 15%; left: 50%; animation-delay: 3.5s; }
+.particle9 { top: 85%; left: 40%; animation-delay: 4s; }
+.particle10 { top: 30%; left: 90%; animation-delay: 4.5s; }
+.particle11 { top: 50%; left: 5%; animation-delay: 5s; }
+.particle12 { top: 90%; left: 75%; animation-delay: 5.5s; }
+
+@keyframes particleFloat {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg) scale(1);
+    opacity: 0.3;
+  }
+  25% {
+    transform: translateY(-40px) rotate(90deg) scale(1.2);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateY(-20px) rotate(180deg) scale(0.8);
+    opacity: 0.5;
+  }
+  75% {
+    transform: translateY(-60px) rotate(270deg) scale(1.5);
+    opacity: 0.9;
+  }
+}
+
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+  .parallaxContainer {
+    will-change: auto; /* Reduce GPU usage on mobile */
+  }
+  
+  .morphShape,
+  .gradientOrb {
+    display: none; /* Hide complex shapes on mobile for performance */
+  }
+  
+  .floatingElement {
+    transform: none !important; /* Disable parallax on mobile */
+  }
+  
+  .medicalIcon {
+    font-size: 1.5rem;
+    opacity: 0.4;
+  }
+  
+  .particle {
+    width: 3px;
+    height: 3px;
+  }
+  
+  /* Reduce particles on mobile */
+  .particle7,
+  .particle8,
+  .particle9,
+  .particle10,
+  .particle11,
+  .particle12 {
+    display: none;
+  }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .parallaxContainer * {
+    animation: none !important;
+    transform: none !important;
+  }
+  
+  .floatingElement,
+  .morphShape,
+  .gradientOrb,
+  .particle {
+    opacity: 0.2;
+  }
+}
+
+/* Performance optimizations */
+@media (max-width: 480px) {
+  .particleSystem {
+    display: none; /* Remove particles on very small screens */
+  }
+  
+  .floatingElement:nth-child(n+3) {
+    display: none; /* Keep only 2 floating elements */
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .medicalIcon {
+    filter: brightness(0.8) blur(0.5px);
+  }
+  
+  .morphShape {
+    opacity: 0.6;
+  }
+  
+  .gradientOrb {
+    opacity: 0.4;
+  }
+}

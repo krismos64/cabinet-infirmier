@@ -9,7 +9,8 @@ import {
   InterventionZones,
   CTA,
   LegalDisclaimer,
-  Footer
+  Footer,
+  MobileNavigation
 } from './components';
 
 function App() {
@@ -18,12 +19,23 @@ function App() {
   return (
     <>
       <Header />
+      <MobileNavigation />
       <main>
-        <Hero />
-        <OpeningHours />
-        <ContactInfo />
-        <Accessibility />
-        <InterventionZones />
+        <section id="hero">
+          <Hero />
+        </section>
+        <section id="hours">
+          <OpeningHours />
+        </section>
+        <section id="contact">
+          <ContactInfo />
+        </section>
+        <section id="accessibility">
+          <Accessibility />
+        </section>
+        <section id="zones">
+          <InterventionZones />
+        </section>
         <CTA />
         <LegalDisclaimer />
       </main>
