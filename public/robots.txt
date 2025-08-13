@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://cabinet-infirmier-graslin.netlify.app/sitemap.xml
+
+# Block access to admin or sensitive directories (if any)
+Disallow: /admin/
+Disallow: /.env
+Disallow: /node_modules/
+
+# Allow all crawlers to access the main content
+Crawl-delay: 1
