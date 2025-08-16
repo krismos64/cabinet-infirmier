@@ -1,13 +1,54 @@
+# Robots.txt pour Cabinet Infirmier Graslin Nantes
+# https://cabinet-infirmier-graslin.netlify.app/
+
+# Autoriser tous les robots d'indexation
 User-agent: *
 Allow: /
+Crawl-delay: 1
+
+# Optimisation pour Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Optimisation pour Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 0
+
+# Bloquer l'accès aux répertoires sensibles
+Disallow: /admin/
+Disallow: /node_modules/
+Disallow: /src/
+Disallow: /.env
+Disallow: /*.json$
+Disallow: /*.lock$
 
 # Sitemap
 Sitemap: https://cabinet-infirmier-graslin.netlify.app/sitemap.xml
 
-# Block access to admin or sensitive directories (if any)
-Disallow: /admin/
-Disallow: /.env
-Disallow: /node_modules/
+# Directives spécifiques pour les images
+User-agent: Googlebot-Image
+Allow: /assets/
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.webp$
 
-# Allow all crawlers to access the main content
+# Optimisation pour les moteurs de recherche locaux français
+User-agent: Qwant
+Allow: /
 Crawl-delay: 1
+
+# Bloquer les mauvais bots connus
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /

@@ -82,8 +82,11 @@ function Hero() {
           <div className={`${styles.heroMedia} fade-in-right`}>
             <img 
               src="/assets/photo-entree.jpg" 
-              alt="Entrée du Cabinet Infirmier Graslin"
+              alt="Entrée du Cabinet Infirmier Graslin - 9 rue Kléber Nantes, quartier Graslin centre-ville, façade du cabinet de soins infirmiers"
               className={`${styles.heroImage} scale-in stagger-4 hover-lift`}
+              loading="eager"
+              width="600"
+              height="400"
             />
             <div className={`${styles.mapContainer} scale-in stagger-5 hover-lift`}>
               <div className={styles.mapOverlay} onClick={handleMapClick}>

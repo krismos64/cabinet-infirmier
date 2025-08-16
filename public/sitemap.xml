@@ -1,14 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-                            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-  
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://cabinet-infirmier-graslin.netlify.app/</loc>
-    <lastmod>2025-08-13</lastmod>
+    <lastmod>2025-01-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://cabinet-infirmier-graslin.netlify.app/assets/photo-entree.jpg</image:loc>
+      <image:title>Cabinet Infirmier Graslin Nantes - Entrée du cabinet</image:title>
+      <image:caption>Façade du Cabinet Infirmier Graslin au 9 rue Kléber à Nantes, quartier Graslin centre-ville</image:caption>
+      <image:geo_location>Nantes, Loire-Atlantique, France</image:geo_location>
+    </image:image>
   </url>
-  
+  <url>
+    <loc>https://cabinet-infirmier-graslin.netlify.app/#hours</loc>
+    <lastmod>2025-01-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://cabinet-infirmier-graslin.netlify.app/#contact</loc>
+    <lastmod>2025-01-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://cabinet-infirmier-graslin.netlify.app/#accessibility</loc>
+    <lastmod>2025-01-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://cabinet-infirmier-graslin.netlify.app/#zones</loc>
+    <lastmod>2025-01-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://cabinet-infirmier-graslin.netlify.app/#services</loc>
+    <lastmod>2025-01-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
 </urlset>
