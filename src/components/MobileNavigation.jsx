@@ -122,15 +122,6 @@ function MobileNavigation() {
         </div>
       </nav>
 
-      {/* Floating Action Button for Quick Call */}
-      <a 
-        href="tel:+33240777381"
-        className={styles.fab}
-        aria-label="Appeler maintenant"
-      >
-        <span className={styles.fabIcon}>📞</span>
-        <div className={styles.fabPulse}></div>
-      </a>
     </>
   );
 }
