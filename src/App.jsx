@@ -7,6 +7,7 @@ import {
   ContactInfo,
   Accessibility,
   InterventionZones,
+  DoctolibSection,
   CTA,
   LegalDisclaimer,
   Footer,
@@ -37,6 +38,9 @@ function App() {
         </section>
         <section id="zones">
           <InterventionZones />
+        </section>
+        <section id="doctolib">
+          <DoctolibSection />
         </section>
         <CTA />
         <LegalDisclaimer />
