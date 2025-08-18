@@ -1,7 +1,18 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import Lottie from 'lottie-react';
 import styles from './InterventionZones.module.css';
 
 function InterventionZones() {
+  const [mapAnimation, setMapAnimation] = useState(null);
+
+  useEffect(() => {
+    // Charger l'animation Lottie depuis le dossier public
+    fetch('/assets/lottie/map search.json')
+      .then(response => response.json())
+      .then(data => setMapAnimation(data))
+      .catch(error => console.error('Erreur lors du chargement de l\'animation:', error));
+  }, []);
+
   const zones = [
     {
       name: 'Quartier Graslin',
@@ -44,6 +55,16 @@ function InterventionZones() {
     <section className={`${styles.section} fade-in`}>
       <div className="container">
         <div className={styles.header}>
+          <div className={styles.mapAnimationSection}>
+            {mapAnimation && (
+              <Lottie 
+                animationData={mapAnimation}
+                className={styles.mapLottieAnimation}
+                loop={true}
+                autoplay={true}
+              />
+            )}
+          </div>
           <h2 className={`${styles.title} scale-in`}>Zone d'intervention</h2>
           <p className={`${styles.subtitle} fade-in stagger-1`}>
             Nous intervenons dans ces quartiers de Nantes pour vos soins à domicile

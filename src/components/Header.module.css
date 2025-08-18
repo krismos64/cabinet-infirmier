@@ -27,6 +27,31 @@
   gap: 1rem;
 }
 
+.logoContainer {
+  width: 3.5rem;
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(218, 165, 32, 0.1) 0%, rgba(255, 215, 0, 0.05) 100%);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  border: 2px solid rgba(218, 165, 32, 0.2);
+}
+
+.logoContainer:hover {
+  transform: scale(1.1);
+  background: linear-gradient(135deg, rgba(218, 165, 32, 0.15) 0%, rgba(255, 215, 0, 0.1) 100%);
+  border-color: rgba(218, 165, 32, 0.4);
+  box-shadow: 0 4px 12px rgba(218, 165, 32, 0.3);
+}
+
+.lottieAnimation {
+  width: 2.5rem;
+  height: 2.5rem;
+  filter: drop-shadow(0 2px 4px rgba(218, 165, 32, 0.2));
+}
+
 .contactInfo {
   display: flex;
   align-items: center;
@@ -341,6 +366,16 @@
     animation: slideInFromBottom 1s ease-out;
   }
   
+  .logoContainer {
+    width: 3rem;
+    height: 3rem;
+  }
+  
+  .lottieAnimation {
+    width: 2rem;
+    height: 2rem;
+  }
+  
   .contactInfo {
     order: 2;
     justify-content: center;
@@ -379,9 +414,14 @@
     display: inline;
   }
   
-  .logo {
-    width: 2.2rem;
-    height: 2.2rem;
+  .logoContainer {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  
+  .lottieAnimation {
+    width: 1.75rem;
+    height: 1.75rem;
   }
   
   /* Progressive enhancement for small screens */

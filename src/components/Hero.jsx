@@ -1,7 +1,18 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import Lottie from 'lottie-react';
 import styles from './Hero.module.css';
 
 function Hero() {
+  const [nurseAnimation, setNurseAnimation] = useState(null);
+
+  useEffect(() => {
+    // Charger l'animation Lottie depuis le dossier public
+    fetch('/assets/lottie/mynurse.json')
+      .then(response => response.json())
+      .then(data => setNurseAnimation(data))
+      .catch(error => console.error('Erreur lors du chargement de l\'animation:', error));
+  }, []);
+
   const handleMapClick = () => {
     const address = "9 rue Kléber, 44000 Nantes, France";
     const encodedAddress = encodeURIComponent(address);
@@ -129,6 +140,17 @@ function Hero() {
                 Nous proposons des <strong>soins infirmiers à domicile et au cabinet</strong> sur rendez-vous 
                 du lundi au dimanche de 7h à 20h. <em>Prise en charge complète par des infirmières diplômées d'État</em>.
               </p>
+            </div>
+            
+            <div className={`${styles.animationSection} fade-in stagger-6`}>
+              {nurseAnimation && (
+                <Lottie 
+                  animationData={nurseAnimation}
+                  className={styles.heroLottieAnimation}
+                  loop={true}
+                  autoplay={true}
+                />
+              )}
             </div>
           </div>
         </div>

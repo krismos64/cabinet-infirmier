@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import Lottie from 'lottie-react';
 import styles from './Header.module.css';
 
 function Header() {
   const [scrolled, setScrolled] = useState(false);
+  const [nurseAnimation, setNurseAnimation] = useState(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -12,6 +14,14 @@ function Header() {
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  useEffect(() => {
+    // Charger l'animation Lottie depuis le dossier public
+    fetch('/assets/lottie/Medic.json')
+      .then(response => response.json())
+      .then(data => setNurseAnimation(data))
+      .catch(error => console.error('Erreur lors du chargement de l\'animation:', error));
   }, []);
 
   const handleAddressClick = () => {
@@ -58,6 +68,16 @@ function Header() {
       <div className="container">
         <div className={styles.headerContent}>
           <div className={styles.logoSection}>
+            <div className={styles.logoContainer}>
+              {nurseAnimation && (
+                <Lottie 
+                  animationData={nurseAnimation}
+                  className={styles.lottieAnimation}
+                  loop={true}
+                  autoplay={true}
+                />
+              )}
+            </div>
             <h1 className={styles.title}>
               <span className={styles.titleWord}>Cabinet</span>
               <span className={styles.titleWord}>Infirmier</span>

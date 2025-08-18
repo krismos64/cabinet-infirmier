@@ -34,6 +34,25 @@
   z-index: 1;
 }
 
+.mapAnimationSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.mapLottieAnimation {
+  width: 12rem;
+  height: 12rem;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+  transition: all 0.3s ease;
+}
+
+.mapLottieAnimation:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.15));
+}
+
 .title {
   font-size: 1.75rem;
   color: #daa520;
@@ -298,6 +317,11 @@
     margin-bottom: 3rem;
   }
   
+  .mapLottieAnimation {
+    width: 14rem;
+    height: 14rem;
+  }
+  
   .title {
     font-size: 2.25rem;
     margin-bottom: 1rem;
@@ -377,6 +401,11 @@
   
   .header {
     margin-bottom: 4rem;
+  }
+  
+  .mapLottieAnimation {
+    width: 16rem;
+    height: 16rem;
   }
   
   .title {

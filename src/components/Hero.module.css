@@ -287,6 +287,16 @@
   overflow: hidden;
 }
 
+.animationSection {
+  background: transparent;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
+  position: relative;
+}
+
 .descriptionSection::before {
   content: '';
   position: absolute;
@@ -305,6 +315,19 @@
   margin: 0;
   position: relative;
   z-index: 1;
+}
+
+
+.heroLottieAnimation {
+  width: 10rem;
+  height: 10rem;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+  transition: all 0.3s ease;
+}
+
+.heroLottieAnimation:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.15));
 }
 
 .heroDescription strong {
@@ -386,8 +409,18 @@
     border-radius: 14px;
   }
   
+  .animationSection {
+    padding: 2.5rem;
+    margin-top: 2rem;
+  }
+  
   .heroDescription {
     font-size: 1.075rem;
+  }
+  
+  .heroLottieAnimation {
+    width: 11rem;
+    height: 11rem;
   }
 }
 
@@ -446,9 +479,19 @@
     border-radius: 16px;
   }
   
+  .animationSection {
+    padding: 3rem;
+    margin-top: 0;
+  }
+  
   .heroDescription {
     font-size: 1.125rem;
     line-height: 1.8;
+  }
+  
+  .heroLottieAnimation {
+    width: 12rem;
+    height: 12rem;
   }
 }
 
@@ -465,5 +508,14 @@
   
   .imageCard {
     height: 360px;
+  }
+  
+  .animationSection {
+    padding: 3.5rem;
+  }
+  
+  .heroLottieAnimation {
+    width: 14rem;
+    height: 14rem;
   }
 }
