@@ -65,7 +65,7 @@ function InterventionZones() {
               />
             )}
           </div>
-          <h2 className={`${styles.title} scale-in`}>Zone d'intervention</h2>
+          <h2 id="zones-title" className={`${styles.title} scale-in`}>Zone d'intervention</h2>
           <p className={`${styles.subtitle} fade-in stagger-1`}>
             Nous intervenons dans ces quartiers de Nantes pour vos soins à domicile
           </p>

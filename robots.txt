@@ -1,0 +1,25 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://cabinet-infirmier-graslin.netlify.app/sitemap.xml
+
+# Optimisations pour les moteurs de recherche
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Crawl-delay pour éviter la surcharge du serveur
+Crawl-delay: 1
+
+# Disallow pour les fichiers non pertinents
+Disallow: /src/
+Disallow: /node_modules/
+Disallow: /*.map$
+Disallow: /vite.config.js
+Disallow: /package.json
+Disallow: /.git/
+Disallow: /.gitignore
+Disallow: /README.md

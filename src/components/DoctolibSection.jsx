@@ -7,7 +7,7 @@ function DoctolibSection() {
       <div className="container">
         <div className={styles.content}>
           <div className={styles.textContent}>
-            <h2 className={`${styles.title} scale-in stagger-1`}>
+            <h2 id="doctolib-title" className={`${styles.title} scale-in stagger-1`}>
               Prenez rendez-vous en ligne
             </h2>
             <p className={`${styles.description} fade-in stagger-2`}>

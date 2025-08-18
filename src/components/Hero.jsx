@@ -57,7 +57,7 @@ function Hero() {
         <div className={styles.heroContent}>
           <div className={styles.heroMain}>
             <div className={`${styles.heroTitle} fade-in stagger-1`}>
-              <h1 className={styles.mainTitle}>
+              <h1 id="hero-title" className={styles.mainTitle}>
                 <span className={styles.titleLine1}>Cabinet Infirmier</span>
                 <span className={styles.titleLine2}>Graslin</span>
               </h1>
@@ -68,9 +68,11 @@ function Hero() {
               <div className={`${styles.imageCard} fade-in stagger-2`}>
                 <img 
                   src="/assets/photo-entree.jpg" 
-                  alt="Entrée du Cabinet Infirmier Graslin"
+                  alt="Entrée du Cabinet Infirmier Graslin situé 9 rue Kléber Nantes centre-ville quartier Graslin"
                   className={styles.heroImage}
                   loading="eager"
+                  width="400"
+                  height="300"
                 />
               </div>
               

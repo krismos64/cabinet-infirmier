@@ -27,7 +27,7 @@ function InfoSections() {
                   <polyline points="12,6 12,12 16,14"/>
                 </svg>
               </div>
-              <h2 className={styles.title}>Horaires d'ouverture</h2>
+              <h2 id="info-title" className={styles.title}>Horaires d'ouverture</h2>
             </div>
             <div className={styles.cardContent}>
               <p className={styles.mainHours}>

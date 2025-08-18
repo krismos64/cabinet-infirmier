@@ -22,16 +22,16 @@ function App() {
       <Header />
       <MobileNavigation />
       <main>
-        <section id="hero">
+        <section id="hero" aria-labelledby="hero-title">
           <Hero />
         </section>
-        <section id="info">
+        <section id="info" aria-labelledby="info-title">
           <InfoSections />
         </section>
-        <section id="zones">
+        <section id="zones" aria-labelledby="zones-title">
           <InterventionZones />
         </section>
-        <section id="doctolib">
+        <section id="doctolib" aria-labelledby="doctolib-title">
           <DoctolibSection />
         </section>
         <CTA />
