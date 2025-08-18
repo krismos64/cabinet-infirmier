@@ -7,7 +7,7 @@ function MobileNavigation() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['hero', 'hours', 'contact', 'accessibility', 'zones'];
+      const sections = ['hero', 'info', 'zones', 'doctolib'];
       const scrollPosition = window.scrollY + 100;
       
       for (const section of sections) {
@@ -41,10 +41,9 @@ function MobileNavigation() {
 
   const navigationItems = [
     { id: 'hero', label: 'Accueil', icon: '🏥' },
-    { id: 'hours', label: 'Horaires', icon: '⏰' },
-    { id: 'contact', label: 'Contact', icon: '📞' },
-    { id: 'accessibility', label: 'Accessibilité', icon: '♿' },
-    { id: 'zones', label: 'Zones', icon: '🗺️' }
+    { id: 'info', label: 'Infos pratiques', icon: '📋' },
+    { id: 'zones', label: 'Zones', icon: '🗺️' },
+    { id: 'doctolib', label: 'Doctolib', icon: '📅' }
   ];
 
   return (
@@ -109,6 +108,15 @@ function MobileNavigation() {
             >
               <span className={styles.actionIcon}>✉️</span>
               <span className={styles.actionLabel}>Email</span>
+            </a>
+            <a 
+              href="https://www.doctolib.fr/cabinet-medical/nantes/cabinet-d-infirmieres-graslin?pid=practice-549225&phs=true&page=1&index=3&highlight%5Bspeciality_ids%5D%5B%5D=30"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`${styles.quickAction} ${styles.doctolib}`}
+            >
+              <span className={styles.actionIcon}>📅</span>
+              <span className={styles.actionLabel}>Doctolib</span>
             </a>
           </div>
         </div>

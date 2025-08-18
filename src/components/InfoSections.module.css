@@ -1,6 +1,6 @@
 .section {
   background: linear-gradient(135deg, #ffffff 0%, #fafafa 50%, #ffffff 100%);
-  padding: 4rem 0;
+  padding: 2rem 0;
   position: relative;
   overflow: hidden;
 }
@@ -18,8 +18,8 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2rem;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
   max-width: 1400px;
   margin: 0 auto;
   position: relative;
@@ -28,11 +28,11 @@
 
 .card {
   background: linear-gradient(135deg, #ffffff 0%, #fefefe 100%);
-  border-radius: 24px;
-  padding: 2rem;
+  border-radius: 16px;
+  padding: 1.5rem;
   box-shadow: 
-    0 8px 32px rgba(0, 0, 0, 0.06),
-    0 2px 8px rgba(0, 0, 0, 0.04);
+    0 4px 16px rgba(0, 0, 0, 0.04),
+    0 1px 4px rgba(0, 0, 0, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.8);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
@@ -73,14 +73,14 @@
 .cardHeader {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
 }
 
 .iconWrapper {
-  width: 3.5rem;
-  height: 3.5rem;
-  border-radius: 16px;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -127,7 +127,7 @@
 }
 
 .title {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 600;
   color: #daa520;
   margin: 0;
@@ -141,9 +141,9 @@
 
 /* Hours Card Styles */
 .mainHours {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
   color: #1e293b;
 }
 
@@ -153,8 +153,8 @@
 }
 
 .subInfo {
-  margin-bottom: 0.75rem;
-  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
   color: #64748b;
 }
 
@@ -166,11 +166,11 @@
 
 /* Contact Card Styles */
 .contactItem {
-  margin-bottom: 1.25rem;
+  margin-bottom: 1rem;
 }
 
 .contactItem:last-of-type {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
 }
 
 .contactLabel {
@@ -188,7 +188,7 @@
   color: #f472b6;
   text-decoration: none;
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: 1rem;
   transition: all 0.2s ease;
   padding: 0.25rem 0;
   border-bottom: 2px solid transparent;
@@ -203,38 +203,87 @@
 .paymentNote {
   padding: 1.25rem;
   background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 100%);
-  border-radius: 12px;
+  border-radius: 10px;
   border-left: 3px solid #f472b6;
   position: relative;
 }
 
-.paymentNote::before {
-  content: '💳';
-  position: absolute;
-  top: 0.75rem;
-  right: 1rem;
-  font-size: 1.25rem;
-  opacity: 0.6;
-}
-
-.paymentNote p {
-  margin: 0;
-  color: #6b7280;
-  font-size: 0.9rem;
-  line-height: 1.5;
-  font-style: italic;
-}
-
-.paymentNote strong {
+.paymentTitle {
+  margin: 0 0 1rem 0;
   color: #374151;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.paymentMethods {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.paymentMethod {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.paymentMethod:hover {
+  background: rgba(255, 255, 255, 0.9);
+  transform: translateX(2px);
+}
+
+.paymentMethod.notAccepted {
+  background: rgba(239, 68, 68, 0.05);
+  border: 1px solid rgba(239, 68, 68, 0.1);
+}
+
+.paymentMethod.notAccepted:hover {
+  background: rgba(239, 68, 68, 0.1);
+}
+
+.paymentIcon {
+  font-size: 1.25rem;
+  min-width: 1.5rem;
+  text-align: center;
+}
+
+.paymentText {
+  flex: 1;
+  color: #4b5563;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.acceptedIcon {
+  color: #10b981;
+  font-weight: bold;
+  font-size: 1.1rem;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.rejectedIcon {
+  color: #ef4444;
+  font-weight: bold;
+  font-size: 1.2rem;
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 /* Accessibility Card Styles */
 .accessibilityText {
-  font-size: 1.125rem;
+  font-size: 1rem;
   color: #374151;
   margin: 0;
-  line-height: 1.7;
+  line-height: 1.6;
 }
 
 .accessibilityCard .highlight {
@@ -242,60 +291,63 @@
   font-weight: 600;
 }
 
-/* Responsive Design */
-@media (max-width: 640px) {
+/* Tablet Styles */
+@media (min-width: 768px) {
   .section {
     padding: 3rem 0;
   }
   
   .grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
   }
   
   .card {
-    padding: 1.5rem;
+    padding: 1.75rem;
+    border-radius: 18px;
   }
   
   .cardHeader {
-    gap: 0.75rem;
-    margin-bottom: 1.25rem;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
   }
   
   .iconWrapper {
-    width: 3rem;
-    height: 3rem;
-  }
-  
-  .icon {
-    width: 1.25rem;
-    height: 1.25rem;
+    width: 3.25rem;
+    height: 3.25rem;
+    border-radius: 14px;
   }
   
   .title {
-    font-size: 1.25rem;
+    font-size: 1.375rem;
   }
   
   .mainHours {
-    font-size: 1.125rem;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+  
+  .subInfo {
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .contactItem {
+    margin-bottom: 1.125rem;
   }
   
   .contactLink {
-    font-size: 1rem;
+    font-size: 1.05rem;
   }
   
   .paymentNote {
-    padding: 1rem;
+    padding: 1.375rem;
+    border-radius: 11px;
   }
   
   .accessibilityText {
-    font-size: 1rem;
-  }
-}
-
-@media (min-width: 641px) and (max-width: 1023px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
+    font-size: 1.075rem;
+    line-height: 1.65;
   }
   
   .accessibilityCard {
@@ -305,13 +357,88 @@
   }
 }
 
+/* Desktop Styles */
 @media (min-width: 1024px) {
+  .section {
+    padding: 4rem 0;
+  }
+  
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+  }
+  
+  .card {
+    padding: 2rem;
+    border-radius: 20px;
+  }
+  
+  .card:hover {
+    transform: translateY(-8px);
+  }
+  
+  .cardHeader {
+    margin-bottom: 1.75rem;
+  }
+  
+  .iconWrapper {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 16px;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+  }
+  
+  .mainHours {
+    font-size: 1.375rem;
+    margin-bottom: 1.25rem;
+  }
+  
+  .subInfo {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .contactItem {
+    margin-bottom: 1.25rem;
+  }
+  
+  .contactItem:last-of-type {
+    margin-bottom: 1.5rem;
+  }
+  
+  .contactLink {
+    font-size: 1.1rem;
+  }
+  
+  .paymentNote {
+    padding: 1.5rem;
+    border-radius: 12px;
+  }
+  
+  .accessibilityText {
+    font-size: 1.125rem;
+    line-height: 1.7;
+  }
+  
+  .accessibilityCard {
+    grid-column: auto;
+    max-width: none;
+    margin: 0;
+  }
+}
+
+/* Large Desktop */
+@media (min-width: 1280px) {
   .section {
     padding: 5rem 0;
   }
   
   .card {
     padding: 2.5rem;
+    border-radius: 24px;
   }
   
   .card:hover {
@@ -323,7 +450,7 @@
   }
   
   .mainHours {
-    font-size: 1.375rem;
+    font-size: 1.5rem;
   }
   
   .contactLink {

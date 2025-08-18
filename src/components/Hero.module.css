@@ -1,5 +1,5 @@
 .hero {
-  padding: 2rem 0 4rem;
+  padding: 1.5rem 0 2.5rem;
   background: linear-gradient(180deg, #ffffff 0%, #fafafa 100%);
   position: relative;
   overflow: hidden;
@@ -29,7 +29,7 @@
 
 .heroTitle {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   animation: fadeInDown 0.8s ease-out;
 }
 
@@ -42,7 +42,7 @@
 }
 
 .titleLine1 {
-  font-size: 1.5rem;
+  font-size: 1.125rem;
   font-weight: 400;
   color: #64748b;
   letter-spacing: 0.05em;
@@ -50,7 +50,7 @@
 }
 
 .titleLine2 {
-  font-size: 3.5rem;
+  font-size: 2.25rem;
   font-weight: 700;
   background: linear-gradient(135deg, #b8860b 0%, #daa520 100%);
   -webkit-background-clip: text;
@@ -61,25 +61,25 @@
 
 .subtitle {
   margin-top: 1rem;
-  font-size: 1.125rem;
+  font-size: 1rem;
   color: #94a3b8;
   font-weight: 300;
 }
 
 .heroGrid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  margin-bottom: 3rem;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .imageCard {
   position: relative;
-  border-radius: 20px;
+  border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  height: 300px;
+  height: 240px;
 }
 
 .imageCard:hover {
@@ -116,18 +116,18 @@
 .infoCards {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 .locationCard,
 .paymentCard {
   background: white;
-  border-radius: 16px;
-  padding: 1.75rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
   border: 1px solid #f1f5f9;
   display: flex;
-  gap: 1.25rem;
+  gap: 1rem;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
@@ -207,8 +207,12 @@
   font-weight: 500;
 }
 
+.paymentItem.notAccepted {
+  color: #ef4444;
+}
+
 .mapSection {
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .mapWrapper {
@@ -220,12 +224,14 @@
 }
 
 .mapHeader {
-  padding: 1.5rem 2rem;
+  padding: 1rem 1.5rem;
   background: linear-gradient(135deg, #fafafa 0%, #f8f9fa 100%);
   border-bottom: 1px solid #e5e7eb;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 1rem;
   align-items: center;
+  text-align: center;
 }
 
 .mapHeader h3 {
@@ -264,7 +270,7 @@
 .mapContainer {
   position: relative;
   width: 100%;
-  height: 350px;
+  height: 280px;
 }
 
 .mapContainer iframe {
@@ -275,8 +281,8 @@
 
 .descriptionSection {
   background: linear-gradient(135deg, #fef3c7 0%, #fde68a 10%, #fef3c7 100%);
-  border-radius: 16px;
-  padding: 2rem;
+  border-radius: 12px;
+  padding: 1.5rem;
   position: relative;
   overflow: hidden;
 }
@@ -293,8 +299,8 @@
 }
 
 .heroDescription {
-  font-size: 1.125rem;
-  line-height: 1.8;
+  font-size: 1rem;
+  line-height: 1.6;
   color: #64748b;
   margin: 0;
   position: relative;
@@ -324,61 +330,140 @@
 }
 
 /* Tablet Styles */
-@media (max-width: 1024px) {
-  .heroGrid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+@media (min-width: 768px) {
+  .hero {
+    padding: 2rem 0 3rem;
   }
   
-  .titleLine2 {
-    font-size: 3rem;
+  .heroGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
   }
-}
-
-/* Mobile Styles */
-@media (max-width: 640px) {
-  .hero {
-    padding: 1.5rem 0 3rem;
+  
+  .heroTitle {
+    margin-bottom: 2.5rem;
   }
   
   .titleLine1 {
-    font-size: 1.125rem;
+    font-size: 1.25rem;
   }
   
   .titleLine2 {
-    font-size: 2.25rem;
+    font-size: 2.75rem;
   }
   
   .subtitle {
-    font-size: 1rem;
+    font-size: 1.125rem;
   }
   
-  .heroGrid {
-    gap: 1rem;
+  .imageCard {
+    height: 280px;
+    border-radius: 18px;
+  }
+  
+  .infoCards {
+    gap: 1.25rem;
   }
   
   .locationCard,
   .paymentCard {
-    padding: 1.25rem;
+    padding: 1.5rem;
+    border-radius: 14px;
   }
   
   .mapHeader {
-    padding: 1rem 1.5rem;
-    flex-direction: column;
-    gap: 1rem;
-    align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
   }
   
-  .directionsBtn {
-    width: 100%;
-    justify-content: center;
+  .mapContainer {
+    height: 320px;
   }
   
   .descriptionSection {
-    padding: 1.5rem;
+    padding: 1.75rem;
+    border-radius: 14px;
   }
   
   .heroDescription {
-    font-size: 1rem;
+    font-size: 1.075rem;
+  }
+}
+
+/* Desktop Styles */
+@media (min-width: 1024px) {
+  .hero {
+    padding: 2.5rem 0 4rem;
+  }
+  
+  .heroTitle {
+    margin-bottom: 3rem;
+  }
+  
+  .titleLine1 {
+    font-size: 1.5rem;
+  }
+  
+  .titleLine2 {
+    font-size: 3.5rem;
+  }
+  
+  .heroGrid {
+    gap: 2.5rem;
+    margin-bottom: 3rem;
+  }
+  
+  .imageCard {
+    height: 320px;
+    border-radius: 20px;
+  }
+  
+  .infoCards {
+    gap: 1.5rem;
+  }
+  
+  .locationCard,
+  .paymentCard {
+    padding: 1.75rem;
+    border-radius: 16px;
+  }
+  
+  .mapSection {
+    margin-bottom: 3rem;
+  }
+  
+  .mapHeader {
+    padding: 1.5rem 2rem;
+  }
+  
+  .mapContainer {
+    height: 350px;
+  }
+  
+  .descriptionSection {
+    padding: 2rem;
+    border-radius: 16px;
+  }
+  
+  .heroDescription {
+    font-size: 1.125rem;
+    line-height: 1.8;
+  }
+}
+
+/* Large Desktop */
+@media (min-width: 1280px) {
+  .heroGrid {
+    max-width: 1200px;
+    margin: 0 auto 3rem;
+  }
+  
+  .titleLine2 {
+    font-size: 4rem;
+  }
+  
+  .imageCard {
+    height: 360px;
   }
 }

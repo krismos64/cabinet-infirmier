@@ -351,6 +351,12 @@
     linear-gradient(135deg, rgba(252, 231, 243, 0.8) 0%, rgba(243, 232, 255, 0.7) 100%);
 }
 
+.quickAction.doctolib:hover {
+  background: 
+    radial-gradient(circle at 50% 50%, rgba(16, 122, 202, 0.2) 0%, transparent 60%),
+    linear-gradient(135deg, rgba(219, 234, 254, 0.8) 0%, rgba(233, 242, 255, 0.7) 100%);
+}
+
 .actionIcon {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;

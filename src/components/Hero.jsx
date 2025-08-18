@@ -61,9 +61,6 @@ function Hero() {
                   className={styles.heroImage}
                   loading="eager"
                 />
-                <div className={styles.imageOverlay}>
-                  <span className={styles.imageCaption}>Notre cabinet</span>
-                </div>
               </div>
               
               <div className={`${styles.infoCards} fade-in stagger-3`}>
@@ -93,6 +90,7 @@ function Hero() {
                     <div className={styles.paymentMethods}>
                       <span className={styles.paymentItem}>✓ Espèces</span>
                       <span className={styles.paymentItem}>✓ Chèques</span>
+                      <span className={`${styles.paymentItem} ${styles.notAccepted}`}>✗ Pas de carte bancaire</span>
                     </div>
                   </div>
                 </div>

@@ -77,10 +77,24 @@ function InfoSections() {
                 </a>
               </div>
               <div className={styles.paymentNote}>
-                <p>
-                  <strong>Paiements acceptés :</strong> Espèces et chèques uniquement.
-                  <br />Pas de carte bancaire.
-                </p>
+                <h4 className={styles.paymentTitle}>Paiements acceptés :</h4>
+                <div className={styles.paymentMethods}>
+                  <div className={styles.paymentMethod}>
+                    <span className={styles.paymentIcon}>💵</span>
+                    <span className={styles.paymentText}>Espèces</span>
+                    <span className={styles.acceptedIcon}>✓</span>
+                  </div>
+                  <div className={styles.paymentMethod}>
+                    <span className={styles.paymentIcon}>📝</span>
+                    <span className={styles.paymentText}>Chèques</span>
+                    <span className={styles.acceptedIcon}>✓</span>
+                  </div>
+                  <div className={`${styles.paymentMethod} ${styles.notAccepted}`}>
+                    <span className={styles.paymentIcon}>💳</span>
+                    <span className={styles.paymentText}>Carte bancaire</span>
+                    <span className={styles.rejectedIcon}>✗</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
