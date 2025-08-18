@@ -14,6 +14,45 @@ function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const handleAddressClick = () => {
+    const address = "9 rue Kléber, 44000 Nantes, France";
+    const encodedAddress = encodeURIComponent(address);
+    
+    // Détecter l'appareil pour proposer les bonnes applications
+    const isMobile = /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+    const isAndroid = /Android/.test(navigator.userAgent);
+    
+    if (isMobile) {
+      // Créer une boîte de dialogue pour choisir l'app GPS
+      const choice = window.confirm(
+        `Ouvrir l'itinéraire vers :\n${address}\n\nAppuyez sur OK pour Google Maps\nou Annuler pour choisir une autre app`
+      );
+      
+      if (choice) {
+        // Google Maps
+        if (isIOS) {
+          window.open(`https://maps.apple.com/?daddr=${encodedAddress}`, '_blank');
+        } else {
+          window.open(`https://www.google.com/maps/dir/?api=1&destination=${encodedAddress}`, '_blank');
+        }
+      } else {
+        // Proposer Waze et Plans
+        const waze = window.confirm("Ouvrir dans Waze ? (Annuler pour Plans Apple)");
+        if (waze) {
+          window.open(`https://waze.com/ul?navigate=yes&q=${encodedAddress}`, '_blank');
+        } else if (isIOS) {
+          window.open(`https://maps.apple.com/?daddr=${encodedAddress}`, '_blank');
+        } else {
+          window.open(`https://www.google.com/maps/dir/?api=1&destination=${encodedAddress}`, '_blank');
+        }
+      }
+    } else {
+      // Desktop - ouvrir directement Google Maps avec itinéraire
+      window.open(`https://www.google.com/maps/dir/?api=1&destination=${encodedAddress}`, '_blank');
+    }
+  };
+
   return (
     <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
       <div className="container">
@@ -45,10 +84,14 @@ function Header() {
               <span className={styles.emoji}>✉️</span>
               <span className={styles.contactText}>infirmiere.cabinet.le.heron@gmail.com</span>
             </a>
-            <div className={`${styles.contactItem} ${styles.address}`}>
+            <button 
+              onClick={handleAddressClick}
+              className={`${styles.contactItem} ${styles.address} touch-feedback`}
+              aria-label="Ouvrir l'itinéraire vers le cabinet"
+            >
               <span className={styles.emoji}>📍</span>
               <span className={styles.contactText}>9 rue Kléber, Nantes</span>
-            </div>
+            </button>
           </div>
         </div>
       </div>

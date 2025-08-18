@@ -44,68 +44,93 @@ function Hero() {
     <section className={`${styles.hero} fade-in`}>
       <div className="container">
         <div className={styles.heroContent}>
-          <div className={`${styles.heroText} fade-in-left stagger-1`}>
-            <address className={`${styles.heroAddress} scale-in stagger-2`}>
-              <div className={styles.addressHeader}>
-                <span className={styles.wellnessIcon}>🏥</span>
-                <strong>Cabinet Infirmier Graslin</strong>
-                <span className={styles.sparkleIcon}>✨</span>
-              </div>
-              <div className={styles.addressDetails}>
-                <span className={styles.locationIcon}>📍</span>
-                9 rue Kléber<br />
-                44000 Nantes<br />
-                <span className={styles.location}>
-                  <span className={styles.heartIcon}>💖</span>
-                  Hyper centre-ville - Quartier Graslin
-                  <span className={styles.leafIcon}>🌿</span>
-                </span>
-              </div>
-            </address>
-            <p className={`${styles.heroDescription} fade-in stagger-3`}>
-              <strong>Cabinet infirmier professionnel</strong> situé au cœur du quartier Graslin à Nantes, en hyper centre-ville. 
-              Nous proposons des <strong>soins infirmiers à domicile et au cabinet</strong> sur rendez-vous du lundi au dimanche de 7h à 20h. 
-              <em>Prise en charge complète par des infirmières diplômées d'État</em>.
-            </p>
-            <div className={`${styles.paymentInfo} fade-in stagger-4`}>
-              <div className={styles.paymentHeader}>
-                <span className={styles.paymentIcon}>💳</span>
-                <strong>Moyens de paiement</strong>
-                <span className={styles.checkIcon}>✅</span>
-              </div>
-              <p>
-                <span className={styles.cashIcon}>💵</span> Espèces et chèques uniquement - 
-                <span className={styles.noCardIcon}>🚫</span> Pas de carte bancaire
-              </p>
+          <div className={styles.heroMain}>
+            <div className={`${styles.heroTitle} fade-in stagger-1`}>
+              <h1 className={styles.mainTitle}>
+                <span className={styles.titleLine1}>Cabinet Infirmier</span>
+                <span className={styles.titleLine2}>Graslin</span>
+              </h1>
+              <p className={styles.subtitle}>Soins professionnels au cœur de Nantes</p>
             </div>
-          </div>
-          <div className={`${styles.heroMedia} fade-in-right`}>
-            <img 
-              src="/assets/photo-entree.jpg" 
-              alt="Entrée du Cabinet Infirmier Graslin - 9 rue Kléber Nantes, quartier Graslin centre-ville, façade du cabinet de soins infirmiers"
-              className={`${styles.heroImage} scale-in stagger-4 hover-lift`}
-              loading="eager"
-              width="600"
-              height="400"
-            />
-            <div className={`${styles.mapContainer} scale-in stagger-5 hover-lift`}>
-              <div className={styles.mapOverlay} onClick={handleMapClick}>
-                <div className={styles.gpsPrompt}>
-                  <span className={styles.gpsIcon}>🧭</span>
-                  <p><strong>Obtenir l'itinéraire</strong></p>
-                  <p>Cliquez pour ouvrir dans votre app GPS</p>
+            
+            <div className={styles.heroGrid}>
+              <div className={`${styles.imageCard} fade-in stagger-2`}>
+                <img 
+                  src="/assets/photo-entree.jpg" 
+                  alt="Entrée du Cabinet Infirmier Graslin"
+                  className={styles.heroImage}
+                  loading="eager"
+                />
+                <div className={styles.imageOverlay}>
+                  <span className={styles.imageCaption}>Notre cabinet</span>
                 </div>
               </div>
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2710.0!2d-1.5615!3d47.2133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4805eec47e8c3935%3A0x6d8b7b8e9c4b5a8d!2s9%20Rue%20Kl%C3%A9ber%2C%2044000%20Nantes!5e0!3m2!1sfr!2sfr!4v1642000000000!5m2!1sfr!2sfr"
-                width="100%"
-                height="300"
-                allowFullScreen=""
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Localisation Cabinet Infirmier Graslin - 9 rue Kléber, 44000 Nantes, quartier Graslin centre-ville"
-                aria-label="Carte interactive montrant l'emplacement du Cabinet Infirmier Graslin au 9 rue Kléber à Nantes"
-              ></iframe>
+              
+              <div className={`${styles.infoCards} fade-in stagger-3`}>
+                <div className={styles.locationCard}>
+                  <div className={styles.cardIcon}>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                      <circle cx="12" cy="10" r="3"/>
+                    </svg>
+                  </div>
+                  <div className={styles.cardContent}>
+                    <h3>Localisation</h3>
+                    <p>9 rue Kléber, 44000 Nantes</p>
+                    <span className={styles.badge}>Quartier Graslin</span>
+                  </div>
+                </div>
+                
+                <div className={styles.paymentCard}>
+                  <div className={styles.cardIcon}>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/>
+                      <line x1="1" y1="10" x2="23" y2="10"/>
+                    </svg>
+                  </div>
+                  <div className={styles.cardContent}>
+                    <h3>Paiement</h3>
+                    <div className={styles.paymentMethods}>
+                      <span className={styles.paymentItem}>✓ Espèces</span>
+                      <span className={styles.paymentItem}>✓ Chèques</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div className={`${styles.mapSection} fade-in stagger-4`}>
+              <div className={styles.mapWrapper}>
+                <div className={styles.mapHeader}>
+                  <h3>Nous trouver</h3>
+                  <button className={styles.directionsBtn} onClick={handleMapClick}>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M3 11l19-9-9 19-2-8-8-2z"/>
+                    </svg>
+                    Itinéraire
+                  </button>
+                </div>
+                <div className={styles.mapContainer}>
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2710.0!2d-1.5615!3d47.2133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4805eec47e8c3935%3A0x6d8b7b8e9c4b5a8d!2s9%20Rue%20Kl%C3%A9ber%2C%2044000%20Nantes!5e0!3m2!1sfr!2sfr!4v1642000000000!5m2!1sfr!2sfr"
+                    width="100%"
+                    height="350"
+                    allowFullScreen=""
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Localisation Cabinet Infirmier Graslin"
+                    aria-label="Carte interactive"
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+            
+            <div className={`${styles.descriptionSection} fade-in stagger-5`}>
+              <p className={styles.heroDescription}>
+                <strong>Cabinet infirmier professionnel</strong> situé au cœur du quartier Graslin à Nantes. 
+                Nous proposons des <strong>soins infirmiers à domicile et au cabinet</strong> sur rendez-vous 
+                du lundi au dimanche de 7h à 20h. <em>Prise en charge complète par des infirmières diplômées d'État</em>.
+              </p>
             </div>
           </div>
         </div>

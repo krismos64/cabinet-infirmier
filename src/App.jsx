@@ -3,9 +3,7 @@ import { useScrollAnimation } from './hooks';
 import {
   Header,
   Hero,
-  OpeningHours,
-  ContactInfo,
-  Accessibility,
+  InfoSections,
   InterventionZones,
   DoctolibSection,
   CTA,
@@ -27,14 +25,8 @@ function App() {
         <section id="hero">
           <Hero />
         </section>
-        <section id="hours">
-          <OpeningHours />
-        </section>
-        <section id="contact">
-          <ContactInfo />
-        </section>
-        <section id="accessibility">
-          <Accessibility />
+        <section id="info">
+          <InfoSections />
         </section>
         <section id="zones">
           <InterventionZones />

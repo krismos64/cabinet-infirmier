@@ -78,13 +78,18 @@
 }
 
 .phone,
-.email {
+.email,
+.address {
   text-decoration: none;
   color: inherit;
+  cursor: pointer;
+  border: none;
+  background: rgba(252, 231, 243, 0.8);
 }
 
 .phone:hover,
-.email:hover {
+.email:hover,
+.address:hover {
   background: rgba(249, 168, 212, 0.4);
   border-color: rgba(249, 168, 212, 0.6);
   transform: translateY(-2px) scale(1.02);
@@ -108,6 +113,12 @@
   background: linear-gradient(135deg, rgba(217, 119, 6, 0.2) 0%, rgba(245, 158, 11, 0.2) 100%);
   border-color: rgba(217, 119, 6, 0.3);
   box-shadow: 0 4px 8px rgba(217, 119, 6, 0.2);
+}
+
+.address:hover {
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.2) 0%, rgba(16, 185, 129, 0.2) 100%);
+  border-color: rgba(34, 197, 94, 0.4);
+  box-shadow: 0 4px 8px rgba(34, 197, 94, 0.3);
 }
 
 .doctolib {
@@ -216,7 +227,7 @@
 
 .title {
   font-size: 1.5rem;
-  color: #7c2d12;
+  color: #daa520;
   font-weight: 800;
   margin: 0;
   letter-spacing: -0.025em;
@@ -224,7 +235,7 @@
   transition: all 0.3s ease;
   display: inline-flex;
   gap: 0.5rem;
-  text-shadow: 0 2px 4px rgba(124, 45, 18, 0.1);
+  text-shadow: 0 2px 4px rgba(218, 165, 32, 0.1);
   animation: titleGlow 3s ease-in-out infinite;
 }
 
@@ -256,17 +267,17 @@
 
 @keyframes titleGlow {
   0%, 100% {
-    color: #7c2d12;
-    text-shadow: 0 2px 4px rgba(124, 45, 18, 0.15);
+    color: #daa520;
+    text-shadow: 0 2px 4px rgba(218, 165, 32, 0.15);
   }
   50% {
-    color: #9a3412;
-    text-shadow: 0 2px 8px rgba(217, 119, 6, 0.25);
+    color: #b8860b;
+    text-shadow: 0 2px 8px rgba(218, 165, 32, 0.25);
   }
 }
 
 .title:hover {
-  color: #d97706;
+  color: #ffd700;
   transform: scale(1.02);
 }
 
