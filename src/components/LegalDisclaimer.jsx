@@ -5,13 +5,13 @@ function LegalDisclaimer() {
   return (
     <section className={`${styles.section} fade-in`}>
       <div className="container">
-        <h2 className={styles.title}>Information légale</h2>
+        <h3 className={styles.title}>Information légale</h3>
         <div className={styles.disclaimerCard}>
           <svg 
             className={styles.infoIcon}
             xmlns="http://www.w3.org/2000/svg" 
-            width="24" 
-            height="24" 
+            width="16" 
+            height="16" 
             viewBox="0 0 24 24" 
             fill="none" 
             stroke="currentColor" 
