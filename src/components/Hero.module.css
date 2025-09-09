@@ -42,9 +42,12 @@
 }
 
 .titleLine1 {
-  font-size: 1.125rem;
-  font-weight: 400;
-  color: #64748b;
+  font-size: 2.25rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #b8860b 0%, #daa520 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
@@ -368,7 +371,7 @@
   }
   
   .titleLine1 {
-    font-size: 1.25rem;
+    font-size: 2.75rem;
   }
   
   .titleLine2 {
@@ -435,7 +438,7 @@
   }
   
   .titleLine1 {
-    font-size: 1.5rem;
+    font-size: 3.5rem;
   }
   
   .titleLine2 {
@@ -500,6 +503,10 @@
   .heroGrid {
     max-width: 1200px;
     margin: 0 auto 3rem;
+  }
+  
+  .titleLine1 {
+    font-size: 4rem;
   }
   
   .titleLine2 {
