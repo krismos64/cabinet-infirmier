@@ -67,15 +67,6 @@ function InfoSections() {
                   02 40 77 73 81
                 </a>
               </div>
-              <div className={styles.contactItem}>
-                <span className={styles.contactLabel}>Email</span>
-                <a
-                  href="mailto:infirmiere.cabinet.le.heron@gmail.com"
-                  className={`${styles.contactLink} touch-feedback`}
-                >
-                  infirmiere.cabinet.le.heron@gmail.com
-                </a>
-              </div>
               <div className={styles.paymentNote}>
                 <h4 className={styles.paymentTitle}>Paiements acceptés :</h4>
                 <div className={styles.paymentMethods}>

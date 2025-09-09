@@ -103,13 +103,6 @@ function MobileNavigation() {
               <span className={styles.actionLabel}>Appeler</span>
             </a>
             <a 
-              href="mailto:infirmiere.cabinet.le.heron@gmail.com" 
-              className={`${styles.quickAction} ${styles.email}`}
-            >
-              <span className={styles.actionIcon}>✉️</span>
-              <span className={styles.actionLabel}>Email</span>
-            </a>
-            <a 
               href="https://www.doctolib.fr/cabinet-medical/nantes/cabinet-d-infirmieres-graslin?pid=practice-549225&phs=true&page=1&index=3&highlight%5Bspeciality_ids%5D%5B%5D=30"
               target="_blank"
               rel="noopener noreferrer"

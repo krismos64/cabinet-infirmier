@@ -33,24 +33,6 @@ function CTA() {
               </svg>
               Appeler maintenant
             </a>
-            <a href="mailto:infirmiere.cabinet.le.heron@gmail.com" className={`${styles.ctaButtonSecondary} scale-in stagger-4 touch-feedback`}>
-              <svg 
-                className={styles.ctaIcon}
-                xmlns="http://www.w3.org/2000/svg" 
-                width="20" 
-                height="20" 
-                viewBox="0 0 24 24" 
-                fill="none" 
-                stroke="currentColor" 
-                strokeWidth="2" 
-                strokeLinecap="round" 
-                strokeLinejoin="round"
-              >
-                <path d="m4 4 16 0 0 16-16 0z"/>
-                <path d="m22 6-10 7L2 6"/>
-              </svg>
-              Envoyer un email
-            </a>
           </div>
         </div>
       </div>
