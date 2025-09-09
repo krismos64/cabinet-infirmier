@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Lottie from 'lottie-react';
 import styles from './Hero.module.css';
+import DoctolibSection from './DoctolibSection';
 
 function Hero() {
   const [nurseAnimation, setNurseAnimation] = useState(null);
@@ -62,6 +63,10 @@ function Hero() {
                 <span className={styles.titleLine2}>Graslin</span>
               </h1>
               <p className={styles.subtitle}>Soins professionnels au cœur de Nantes</p>
+            </div>
+            
+            <div className={styles.doctolibContainer}>
+              <DoctolibSection />
             </div>
             
             <div className={styles.heroGrid}>

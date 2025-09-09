@@ -5,7 +5,6 @@ import {
   Hero,
   InfoSections,
   InterventionZones,
-  DoctolibSection,
   CTA,
   LegalDisclaimer,
   Footer,
@@ -30,9 +29,6 @@ function App() {
         </section>
         <section id="zones" aria-labelledby="zones-title">
           <InterventionZones />
-        </section>
-        <section id="doctolib" aria-labelledby="doctolib-title">
-          <DoctolibSection />
         </section>
         <CTA />
         <LegalDisclaimer />
