@@ -7,7 +7,7 @@ function MobileNavigation() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['hero', 'info', 'zones', 'doctolib'];
+      const sections = ['hero', 'doctolib', 'info', 'zones'];
       const scrollPosition = window.scrollY + 100;
       
       for (const section of sections) {
@@ -41,9 +41,9 @@ function MobileNavigation() {
 
   const navigationItems = [
     { id: 'hero', label: 'Accueil', icon: '🏥' },
+    { id: 'doctolib', label: 'Doctolib', icon: '📅' },
     { id: 'info', label: 'Infos pratiques', icon: '📋' },
-    { id: 'zones', label: 'Zones', icon: '🗺️' },
-    { id: 'doctolib', label: 'Doctolib', icon: '📅' }
+    { id: 'zones', label: 'Zones', icon: '🗺️' }
   ];
 
   return (

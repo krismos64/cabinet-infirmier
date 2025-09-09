@@ -65,7 +65,7 @@ function Hero() {
               <p className={styles.subtitle}>Soins professionnels au cœur de Nantes</p>
             </div>
             
-            <div className={styles.doctolibContainer}>
+            <div id="doctolib" className={styles.doctolibContainer}>
               <DoctolibSection />
             </div>
             
