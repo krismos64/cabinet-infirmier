@@ -92,6 +92,9 @@ function Hero() {
                   <div className={styles.cardContent}>
                     <h3>Localisation</h3>
                     <p>9 rue Kléber, 44000 Nantes</p>
+                    <p className={styles.accessInfo}>
+                      <strong>Accès :</strong> Rez-de-chaussée, traverser le hall extérieur, porte d'entrée à droite
+                    </p>
                     <span className={styles.badge}>Quartier Graslin</span>
                   </div>
                 </div>
