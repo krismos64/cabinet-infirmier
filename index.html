@@ -17,8 +17,8 @@
   <meta property="og:title" content="Cabinet Infirmier Graslin Nantes | Soins Infirmiers 7j/7 | Centre-Ville">
   <meta property="og:description" content="⚕️ Cabinet infirmier Nantes centre-ville quartier Graslin. Soins à domicile et au cabinet 7j/7 de 7h à 20h. Infirmières diplômées d'État. Pansements, injections, prélèvements. 📍 9 rue Kléber">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://cabinet-infirmier-graslin.netlify.app/">
-  <meta property="og:image" content="https://cabinet-infirmier-graslin.netlify.app/assets/photo-entree.jpg">
+  <meta property="og:url" content="https://cabinet-infirmier-graslin.fr/">
+  <meta property="og:image" content="https://cabinet-infirmier-graslin.fr/assets/photo-entree.webp">
   <meta property="og:locale" content="fr_FR">
   <meta property="og:site_name" content="Cabinet Infirmier Graslin">
   
@@ -26,10 +26,10 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Cabinet Infirmier Graslin Nantes | Soins 7j/7 Centre-Ville">
   <meta name="twitter:description" content="Cabinet infirmier Nantes centre Graslin. Soins à domicile et au cabinet 7j/7 de 7h à 20h. Infirmières diplômées. 📍 9 rue Kléber 44000">
-  <meta name="twitter:image" content="https://cabinet-infirmier-graslin.netlify.app/assets/photo-entree.jpg">
+  <meta name="twitter:image" content="https://cabinet-infirmier-graslin.fr/assets/photo-entree.webp">
   
   <!-- Additional SEO meta tags -->
-  <link rel="canonical" href="https://cabinet-infirmier-graslin.netlify.app/">
+  <link rel="canonical" href="https://cabinet-infirmier-graslin.fr/">
   <link rel="sitemap" type="application/xml" href="/sitemap.xml">
   <meta name="theme-color" content="#2563eb">
   <meta name="mobile-web-app-capable" content="yes">
@@ -52,7 +52,12 @@
   
   <title>Cabinet Infirmier Graslin Nantes | Soins Infirmiers à Domicile 7j/7 | Centre-Ville 44000</title>
   <!-- Preload des ressources critiques -->
-  <link rel="preload" href="/assets/photo-entree.jpg" as="image" fetchpriority="high">
+  <link rel="preload" href="/assets/photo-entree.webp" as="image" type="image/webp" fetchpriority="high">
+  <link rel="preload" href="/assets/photo-entree-optimized.jpg" as="image" fetchpriority="high">
+  <link rel="preload" as="style" href="/src/styles/globals.css">
+  <link rel="dns-prefetch" href="https://www.doctolib.fr">
+  <link rel="preconnect" href="https://maps.googleapis.com">
+  <link rel="preconnect" href="https://maps.gstatic.com" crossorigin>
   
   <!-- Favicon et icônes -->
   <link rel="icon" type="image/png" href="/assets/favicon.png">
@@ -68,14 +73,14 @@
   {
     "@context": "https://schema.org",
     "@type": "MedicalBusiness",
-    "@id": "https://cabinet-infirmier-graslin.netlify.app/#organization",
+    "@id": "https://cabinet-infirmier-graslin.fr/#organization",
     "name": "Cabinet Infirmier Graslin",
     "alternateName": "Cabinet Infirmier Le Héron",
     "description": "Cabinet infirmier professionnel proposant des soins infirmiers à domicile et au cabinet dans le quartier Graslin à Nantes. Ouvert 7j/7 de 7h à 20h. Infirmières diplômées d'État.",
-    "url": "https://cabinet-infirmier-graslin.netlify.app/",
-    "logo": "https://cabinet-infirmier-graslin.netlify.app/assets/photo-entree.jpg",
+    "url": "https://cabinet-infirmier-graslin.fr/",
+    "logo": "https://cabinet-infirmier-graslin.fr/assets/photo-entree-optimized.jpg",
     "image": [
-      "https://cabinet-infirmier-graslin.netlify.app/assets/photo-entree.jpg"
+      "https://cabinet-infirmier-graslin.fr/assets/photo-entree-optimized.jpg"
     ],
     "telephone": "+33240777381",
     "priceRange": "Conventionné Sécurité Sociale",
@@ -267,19 +272,19 @@
         "@type": "ListItem",
         "position": 1,
         "name": "Accueil",
-        "item": "https://cabinet-infirmier-graslin.netlify.app/"
+        "item": "https://cabinet-infirmier-graslin.fr/"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Services",
-        "item": "https://cabinet-infirmier-graslin.netlify.app/#services"
+        "item": "https://cabinet-infirmier-graslin.fr/#services"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "Contact",
-        "item": "https://cabinet-infirmier-graslin.netlify.app/#contact"
+        "item": "https://cabinet-infirmier-graslin.fr/#contact"
       }
     ]
   }
@@ -291,8 +296,8 @@
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Cabinet Infirmier Graslin",
-    "@id": "https://cabinet-infirmier-graslin.netlify.app/#localbusiness",
-    "url": "https://cabinet-infirmier-graslin.netlify.app/",
+    "@id": "https://cabinet-infirmier-graslin.fr/#localbusiness",
+    "url": "https://cabinet-infirmier-graslin.fr/",
     "telephone": "+33240777381",
     "address": {
       "@type": "PostalAddress",
@@ -355,6 +360,21 @@
   }
   </script>
   
+  <!-- Service Worker Registration -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+          .then(registration => {
+            console.log('SW registered: ', registration);
+          })
+          .catch(registrationError => {
+            console.log('SW registration failed: ', registrationError);
+          });
+      });
+    }
+  </script>
+
   <script type="module" src="/src/index.jsx"></script>
 </body>
 </html>

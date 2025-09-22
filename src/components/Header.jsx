@@ -17,11 +17,17 @@ function Header() {
   }, []);
 
   useEffect(() => {
-    // Charger l'animation Lottie depuis le dossier public
-    fetch('/assets/lottie/Medic.json')
-      .then(response => response.json())
-      .then(data => setNurseAnimation(data))
-      .catch(error => console.error('Erreur lors du chargement de l\'animation:', error));
+    // Charger l'animation Lottie seulement après un délai (non critique)
+    const loadAnimation = () => {
+      fetch('/assets/lottie/Medic.json')
+        .then(response => response.json())
+        .then(data => setNurseAnimation(data))
+        .catch(error => console.error('Erreur lors du chargement de l\'animation:', error));
+    };
+
+    // Délaier le chargement pour prioriser les ressources critiques
+    const timer = setTimeout(loadAnimation, 1500);
+    return () => clearTimeout(timer);
   }, []);
 
   const handleAddressClick = () => {

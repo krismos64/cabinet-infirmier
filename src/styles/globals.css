@@ -48,6 +48,37 @@ h1, h2, h3, h4, h5, h6 {
   filter: none;
 }
 
+/* Explicit font sizes to avoid user-agent styles */
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+h5 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+h6 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
 p {
   margin-bottom: 1rem;
   line-height: 1.7;

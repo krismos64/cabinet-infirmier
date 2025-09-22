@@ -7,12 +7,34 @@ function Hero() {
   const [nurseAnimation, setNurseAnimation] = useState(null);
 
   useEffect(() => {
-    // Charger l'animation Lottie depuis le dossier public
-    fetch('/assets/lottie/mynurse.json')
-      .then(response => response.json())
-      .then(data => setNurseAnimation(data))
-      .catch(error => console.error('Erreur lors du chargement de l\'animation:', error));
-  }, []);
+    // Charger l'animation Lottie avec Intersection Observer pour lazy loading
+    const loadAnimation = () => {
+      fetch('/assets/lottie/mynurse.json')
+        .then(response => response.json())
+        .then(data => setNurseAnimation(data))
+        .catch(error => console.error('Erreur lors du chargement de l\'animation:', error));
+    };
+
+    // Utiliser Intersection Observer pour charger l'animation seulement quand elle devient visible
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !nurseAnimation) {
+          loadAnimation();
+          observer.disconnect();
+        }
+      });
+    }, { rootMargin: '200px' });
+
+    const animationSection = document.querySelector('[class*="animationSection"]');
+    if (animationSection) {
+      observer.observe(animationSection);
+    } else {
+      // Fallback avec délai si l'élément n'est pas encore disponible
+      setTimeout(loadAnimation, 2000);
+    }
+
+    return () => observer.disconnect();
+  }, [nurseAnimation]);
 
   const handleMapClick = () => {
     const address = "9 rue Kléber, 44000 Nantes, France";
@@ -80,14 +102,18 @@ function Hero() {
             
             <div className={styles.heroGrid}>
               <div className={`${styles.imageCard} fade-in stagger-2`}>
-                <img 
-                  src="/assets/photo-entree.jpg" 
-                  alt="Entrée du Cabinet Infirmier Graslin situé 9 rue Kléber Nantes centre-ville quartier Graslin"
-                  className={styles.heroImage}
-                  loading="eager"
-                  width="400"
-                  height="300"
-                />
+                <picture>
+                  <source srcSet="/assets/photo-entree.webp" type="image/webp" />
+                  <img
+                    src="/assets/photo-entree-optimized.jpg"
+                    alt="Entrée du Cabinet Infirmier Graslin situé 9 rue Kléber Nantes centre-ville quartier Graslin"
+                    className={styles.heroImage}
+                    loading="lazy"
+                    width="720"
+                    height="480"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
+                </picture>
               </div>
               
               <div className={`${styles.infoCards} fade-in stagger-3`}>
