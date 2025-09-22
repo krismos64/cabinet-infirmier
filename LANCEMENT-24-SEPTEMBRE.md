@@ -90,5 +90,25 @@ Après ces manipulations, le site sera entièrement opérationnel avec :
 
 ---
 
+## 🔍 **Google Search Console - CONFIGURÉ ✅**
+
+### **Balise de vérification ajoutée :**
+- ✅ `maintenance.html` → Vérification Google active
+- ✅ `index-site.html` → Prêt pour le lancement
+- ✅ Code : `EHA4zI2VBkRG4But1dVtvNmr6-eqrlka3PIE5ZOF2LI`
+
+### **Actions à faire MAINTENANT (22-23 septembre) :**
+1. **Vérifier la propriété** dans Google Search Console
+2. **Soumettre le sitemap** : `https://cabinet-infirmier-graslin.fr/sitemap.xml`
+3. **Demander l'indexation** des fichiers :
+   - `/robots.txt`
+   - `/seo-local-nantes.json`
+   - `/ai-llm-context.txt`
+
+### **Avantage :**
+Le domaine sera **pré-indexé** et le site complet sera **immédiatement visible** dans Google dès le 24 septembre ! 🚀
+
+---
+
 **Date de création de cette procédure :** 22 septembre 2025
 **Lancement prévu :** 24 septembre 2025
