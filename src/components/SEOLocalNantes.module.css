@@ -1,0 +1,220 @@
+.seoLocal {
+  padding: 3rem 0;
+  background: linear-gradient(135deg, #fefefe 0%, #fafafa 100%);
+}
+
+.title {
+  font-size: 2rem;
+  color: #daa520;
+  text-align: center;
+  margin-bottom: 2rem;
+  line-height: 1.4;
+}
+
+.intro {
+  max-width: 900px;
+  margin: 0 auto 3rem;
+  text-align: center;
+}
+
+.introText {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #4a5568;
+}
+
+.introText strong {
+  color: #daa520;
+  font-weight: 600;
+}
+
+.introText em {
+  color: #b8860b;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.quartiersGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.quartierCard {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  border: 1px solid #f1f5f9;
+  transition: all 0.3s ease;
+}
+
+.quartierCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(218, 165, 32, 0.15);
+  border-color: #daa520;
+}
+
+.quartierTitle {
+  font-size: 1.25rem;
+  color: #b8860b;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.quartierDescription {
+  color: #64748b;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.quartierInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  background: #fef3c7;
+  border-radius: 8px;
+}
+
+.distance,
+.services {
+  font-size: 0.9rem;
+  color: #92400e;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.keywords {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.keyword {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  background: #f8fafc;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #e2e8f0;
+}
+
+.servicesSection {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.servicesTitle {
+  font-size: 1.75rem;
+  color: #daa520;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.servicesList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.serviceColumn h4 {
+  color: #b8860b;
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #fef3c7;
+}
+
+.serviceColumn ul {
+  list-style: none;
+  padding: 0;
+}
+
+.serviceColumn li {
+  padding: 0.5rem 0;
+  color: #4a5568;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.serviceColumn li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #10b981;
+  font-weight: bold;
+}
+
+.ctaSection {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+}
+
+.ctaSection h3 {
+  font-size: 1.5rem;
+  color: #92400e;
+  margin-bottom: 1rem;
+}
+
+.ctaText {
+  font-size: 1.1rem;
+  color: #78350f;
+  line-height: 1.8;
+}
+
+.phoneLink,
+.doctolibLink {
+  color: #b8860b;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.phoneLink:hover,
+.doctolibLink:hover {
+  color: #daa520;
+  transform: scale(1.05);
+}
+
+.seoHidden {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  .quartiersGrid {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+  }
+
+  .servicesList {
+    grid-template-columns: 1fr;
+  }
+
+  .servicesSection {
+    margin: 0 1rem;
+  }
+
+  .ctaSection {
+    margin: 0 1rem;
+  }
+}

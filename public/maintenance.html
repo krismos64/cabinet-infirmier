@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Cabinet Infirmier Graslin - Bientôt Disponible</title>
+  <meta name="description" content="Le nouveau site du Cabinet Infirmier Graslin Nantes sera bientôt disponible. Lancement prévu le 24 septembre 2025.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
+
+  <!-- Preload critical resources -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 25%, #f3e8ff 50%, #fce7f3 75%, #fdf2f8 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background:
+        radial-gradient(circle at 20% 80%, rgba(217, 119, 6, 0.03) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(252, 231, 243, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 60% 60%, rgba(249, 168, 212, 0.04) 0%, transparent 40%);
+      pointer-events: none;
+      animation: floatingOrbs 45s ease-in-out infinite;
+    }
+
+    .container {
+      max-width: 600px;
+      padding: 2rem;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      border: 1px solid rgba(249, 168, 212, 0.2);
+      position: relative;
+      animation: fadeInUp 1s ease-out;
+    }
+
+    .logo {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, #daa520 0%, #ffd700 100%);
+      border-radius: 50%;
+      margin: 0 auto 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      animation: pulse 3s ease-in-out infinite;
+      position: relative;
+    }
+
+    .logo::after {
+      content: '⚕️';
+      font-size: 2.5rem;
+    }
+
+    .title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, #b8860b 0%, #daa520 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    .subtitle {
+      color: #64748b;
+      font-size: 1.125rem;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+
+    .countdown {
+      background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+      border-radius: 16px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      border: 2px solid rgba(218, 165, 32, 0.2);
+    }
+
+    .countdown-title {
+      color: #92400e;
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .countdown-timer {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .countdown-item {
+      background: white;
+      border-radius: 12px;
+      padding: 1rem;
+      min-width: 80px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .countdown-number {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #daa520;
+      display: block;
+    }
+
+    .countdown-label {
+      font-size: 0.875rem;
+      color: #64748b;
+      font-weight: 500;
+    }
+
+    .info {
+      background: rgba(252, 231, 243, 0.5);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .info h3 {
+      color: #b8860b;
+      font-size: 1.125rem;
+      margin-bottom: 1rem;
+    }
+
+    .contact-info {
+      color: #4a5568;
+      line-height: 1.8;
+    }
+
+    .contact-info strong {
+      color: #daa520;
+    }
+
+    .phone-link {
+      color: #10b981;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .phone-link:hover {
+      color: #059669;
+      transform: scale(1.05);
+    }
+
+    .footer {
+      margin-top: 2rem;
+      color: #94a3b8;
+      font-size: 0.875rem;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 20px rgba(218, 165, 32, 0.3);
+      }
+      50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 30px rgba(218, 165, 32, 0.5);
+      }
+    }
+
+    @keyframes floatingOrbs {
+      0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+      }
+      25% {
+        transform: translateY(-20px) rotate(1deg);
+      }
+      50% {
+        transform: translateY(0px) rotate(0deg);
+      }
+      75% {
+        transform: translateY(-10px) rotate(-1deg);
+      }
+    }
+
+    /* Mobile styles */
+    @media (max-width: 768px) {
+      .container {
+        margin: 1rem;
+        padding: 1.5rem;
+      }
+
+      .title {
+        font-size: 2rem;
+      }
+
+      .subtitle {
+        font-size: 1rem;
+      }
+
+      .countdown-timer {
+        gap: 0.5rem;
+      }
+
+      .countdown-item {
+        min-width: 70px;
+        padding: 0.75rem;
+      }
+
+      .countdown-number {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="logo"></div>
+
+    <h1 class="title">Cabinet Infirmier Graslin</h1>
+    <p class="subtitle">
+      Notre nouveau site sera bientôt disponible pour mieux vous servir
+    </p>
+
+    <div class="countdown">
+      <h2 class="countdown-title">Lancement dans :</h2>
+      <div class="countdown-timer" id="countdown">
+        <div class="countdown-item">
+          <span class="countdown-number" id="days">--</span>
+          <div class="countdown-label">Jours</div>
+        </div>
+        <div class="countdown-item">
+          <span class="countdown-number" id="hours">--</span>
+          <div class="countdown-label">Heures</div>
+        </div>
+        <div class="countdown-item">
+          <span class="countdown-number" id="minutes">--</span>
+          <div class="countdown-label">Minutes</div>
+        </div>
+        <div class="countdown-item">
+          <span class="countdown-number" id="seconds">--</span>
+          <div class="countdown-label">Secondes</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="info">
+      <h3>En attendant, nous restons à votre service</h3>
+      <div class="contact-info">
+        <strong>📍 Adresse :</strong> 9 rue Kléber, 44000 Nantes<br>
+        <strong>📞 Téléphone :</strong> <a href="tel:+33240777381" class="phone-link">02 40 77 73 81</a><br>
+        <strong>🕐 Horaires :</strong> 7h-20h, 7j/7 (y compris dimanche et jours fériés)<br>
+        <strong>🏥 Services :</strong> Soins infirmiers à domicile et au cabinet
+      </div>
+    </div>
+
+    <div class="footer">
+      Site disponible le <strong>24 septembre 2025</strong><br>
+      Cabinet conventionné Sécurité Sociale
+    </div>
+  </div>
+
+  <script>
+    // Countdown timer
+    const launchDate = new Date('2025-09-24T00:00:00');
+
+    function updateCountdown() {
+      const now = new Date();
+      const timeDiff = launchDate - now;
+
+      if (timeDiff <= 0) {
+        // Rediriger vers le site principal si la date est atteinte
+        window.location.href = '/index.html';
+        return;
+      }
+
+      const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+
+      document.getElementById('days').textContent = days.toString().padStart(2, '0');
+      document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+      document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+      document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+    }
+
+    // Mettre à jour le countdown chaque seconde
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  </script>
+</body>
+</html>

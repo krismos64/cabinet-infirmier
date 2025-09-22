@@ -11,6 +11,7 @@ import {
   MobileNavigation,
   FloatingElements
 } from './components';
+import SEOLocalNantes from './components/SEOLocalNantes';
 
 function App() {
   useScrollAnimation();
@@ -29,6 +30,9 @@ function App() {
         </section>
         <section id="zones" aria-labelledby="zones-title">
           <InterventionZones />
+        </section>
+        <section id="seo-local" aria-labelledby="seo-local-title">
+          <SEOLocalNantes />
         </section>
         <CTA />
         <LegalDisclaimer />

@@ -1,20 +1,76 @@
+# Robots.txt - Cabinet Infirmier Graslin Nantes
+# https://cabinet-infirmier-graslin.fr
+
+# Autorisation générale
 User-agent: *
 Allow: /
-
-# Sitemap
-Sitemap: https://cabinet-infirmier-graslin.netlify.app/sitemap.xml
-
-# Optimisations pour les moteurs de recherche
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-# Crawl-delay pour éviter la surcharge du serveur
 Crawl-delay: 1
 
-# Disallow pour les fichiers non pertinents
+# Sitemap principal
+Sitemap: https://cabinet-infirmier-graslin.fr/sitemap.xml
+
+# Google
+User-agent: Googlebot
+Allow: /
+Allow: /ai-llm-context.txt
+Allow: /seo-local-nantes.json
+
+# Bing
+User-agent: Bingbot
+Allow: /
+Allow: /ai-llm-context.txt
+
+# OpenAI GPT Bot
+User-agent: GPTBot
+Allow: /
+Allow: /ai-llm-context.txt
+
+# Claude/Anthropic Bot
+User-agent: Claude-Web
+Allow: /
+Allow: /ai-llm-context.txt
+
+# ChatGPT User
+User-agent: ChatGPT-User
+Allow: /
+Allow: /ai-llm-context.txt
+
+# Google Bard / Gemini
+User-agent: Google-Extended
+Allow: /
+Allow: /ai-llm-context.txt
+
+# Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+Allow: /ai-llm-context.txt
+
+# Facebook / Meta AI
+User-agent: FacebookBot
+Allow: /
+
+# Apple Bot (Siri)
+User-agent: Applebot
+Allow: /
+
+# Amazon Alexa
+User-agent: Amazonbot
+Allow: /
+
+# Microsoft Copilot
+User-agent: bingbot
+Allow: /
+Allow: /ai-llm-context.txt
+
+# Ressources spécifiques pour IA/LLM
+User-agent: *
+Allow: /ai-llm-context.txt
+Allow: /seo-local-nantes.json
+Allow: /manifest.json
+Allow: /assets/
+
+# Fichiers à exclure
+User-agent: *
 Disallow: /src/
 Disallow: /node_modules/
 Disallow: /*.map$
@@ -22,4 +78,14 @@ Disallow: /vite.config.js
 Disallow: /package.json
 Disallow: /.git/
 Disallow: /.gitignore
-Disallow: /README.md
+Disallow: /dist/
+Disallow: /*.log
+
+# Informations pour IA/LLM
+# Cabinet Infirmier Graslin
+# 9 rue Kléber, 44000 Nantes
+# Tél: 02 40 77 73 81
+# Horaires: 7h-20h, 7j/7
+# Services: Soins infirmiers à domicile et au cabinet
+# Zones: Graslin, Dobrée, Guist'hau, Place Royale, Quai de la Fosse, Canclaux
+# Conventionné Sécurité Sociale
