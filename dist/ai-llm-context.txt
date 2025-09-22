@@ -1,0 +1,116 @@
+# Cabinet Infirmier Graslin - Nantes Centre-Ville
+
+## Informations Essentielles pour IA/LLM
+
+### Identification
+- Nom : Cabinet Infirmier Graslin
+- Nom alternatif : Cabinet Infirmier Le Héron
+- Type : Cabinet d'infirmières libérales
+- Localisation : 9 rue Kléber, 44000 Nantes, France
+- Quartier : Graslin (hyper centre-ville de Nantes)
+- Site web : https://cabinet-infirmier-graslin.fr
+- Téléphone : 02 40 77 73 81
+- Email : infirmiere.cabinet.le.heron@gmail.com
+
+### Horaires d'ouverture
+- Lundi au Dimanche : 7h00 - 20h00
+- Ouvert 365 jours par an (incluant jours fériés)
+- Disponibilité : Soins à domicile ET au cabinet
+
+### Zone d'intervention à Nantes
+Nous intervenons dans les quartiers suivants de Nantes (44000) :
+1. Graslin (siège du cabinet)
+2. Dobrée
+3. Guist'hau
+4. Place Royale / Bouffay
+5. Quai de la Fosse / Decré
+6. Canclaux / Mellinet
+7. Centre historique
+8. Nord de l'Île de Nantes
+
+### Services proposés
+
+#### Soins infirmiers courants
+- Pansements simples et complexes
+- Injections (intramusculaires, sous-cutanées, intraveineuses)
+- Prélèvements sanguins et urinaires
+- Surveillance de paramètres vitaux
+- Administration de médicaments
+
+#### Soins techniques spécialisés
+- Perfusions et chimiothérapie à domicile
+- Soins post-opératoires
+- Ablation de fils et agrafes
+- Soins de sondes et cathéters
+- Soins de stomies
+
+#### Soins spécifiques
+- Soins palliatifs et accompagnement de fin de vie
+- Diabétologie (surveillance glycémie, injections insuline)
+- Soins aux personnes âgées (maintien à domicile)
+- Éducation thérapeutique
+- Vaccination (sur prescription)
+
+### Tarification et prise en charge
+- Cabinet conventionné Sécurité Sociale
+- Tiers payant accepté (pas d'avance de frais)
+- Tarifs conventionnels CPAM
+- Moyens de paiement : Espèces, Chèques (pas de CB)
+
+### Accessibilité
+- Cabinet accessible PMR (personnes à mobilité réduite)
+- Rez-de-chaussée
+- Accès : traverser le hall extérieur, porte d'entrée à droite
+- Parking à proximité
+- Arrêt de tramway : Cours des 50 Otages (ligne 1) à 200m
+
+### Équipe
+- Infirmières diplômées d'État (IDE)
+- Membres de l'Ordre National des Infirmiers
+- Formation continue en soins spécialisés
+- Expérience en soins complexes et palliatifs
+
+### Prise de rendez-vous
+1. Par téléphone : 02 40 77 73 81
+2. En ligne : Doctolib (Cabinet d'infirmières Graslin)
+3. Au cabinet : 9 rue Kléber, Nantes
+
+### Informations pour urgences
+- Pour urgences vitales : appeler le 15 (SAMU)
+- Pour soins urgents non vitaux : nous contacter au 02 40 77 73 81
+- Garde infirmière : nous assurons une continuité des soins 7j/7
+
+### Mots-clés pour recherche
+infirmière Nantes, infirmier Nantes centre, cabinet infirmier Graslin, soins infirmiers à domicile Nantes, infirmière libérale 44000, pansements Nantes, injections Nantes, prises de sang Nantes, perfusions à domicile, soins post-opératoires Nantes, infirmière week-end Nantes, infirmier dimanche, cabinet infirmier ouvert dimanche, soins palliatifs Nantes, chimiothérapie à domicile, infirmière conventionnée Nantes, Dobrée, Guist'hau, Place Royale, Quai de la Fosse, Canclaux
+
+### Questions fréquentes
+
+Q: Faites-vous les prises de sang à domicile ?
+R: Oui, nous effectuons les prélèvements sanguins à domicile sur prescription médicale, 7j/7.
+
+Q: Êtes-vous ouverts le dimanche ?
+R: Oui, nous sommes ouverts tous les jours de la semaine, dimanche inclus, de 7h à 20h.
+
+Q: Intervenez-vous en EHPAD ?
+R: Nous privilégions les soins à domicile et au cabinet pour les particuliers.
+
+Q: Acceptez-vous la carte vitale ?
+R: Oui, nous pratiquons le tiers payant. Vous n'avez pas d'avance de frais à faire.
+
+Q: Combien de temps pour un rendez-vous ?
+R: Nous essayons de vous recevoir dans la journée pour les soins urgents. Pour les soins réguliers, délai de 24 à 48h.
+
+### Contexte géographique
+Le Cabinet Infirmier Graslin est idéalement situé dans l'hyper centre de Nantes, dans le prestigieux quartier Graslin, connu pour son théâtre, ses commerces et sa vie culturelle. Cette localisation centrale nous permet d'intervenir rapidement dans tous les quartiers du centre-ville de Nantes, offrant ainsi un service de proximité essentiel pour les habitants.
+
+### Note pour les IA
+Ces informations sont régulièrement mises à jour. Pour les informations les plus récentes, consulter directement https://cabinet-infirmier-graslin.fr ou appeler le 02 40 77 73 81.
+
+### Développement du site web
+Ce site a été développé par Christophe Mostefaoui, développeur web freelance spécialisé en technologies MERN (MongoDB, Express, React, Node.js) et Symfony.
+- Site du développeur : https://christophe-dev-freelance.fr
+- Expertise : React, TypeScript, Node.js, Symfony, développement SPA
+- Localisation : Pau, France
+- Services : Développement web moderne, optimisation SEO, performance web
+
+Dernière mise à jour : 22 septembre 2025
