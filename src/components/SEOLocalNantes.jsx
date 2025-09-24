@@ -132,7 +132,7 @@ function SEOLocalNantes() {
           <h3>Besoin d'une Infirmière à Domicile à Nantes ?</h3>
           <p className={styles.ctaText}>
             Contactez le <strong>Cabinet Infirmier Graslin</strong> au
-            <a href="tel:+33240777381" className={styles.phoneLink}> 02 40 77 73 81</a> ou
+            <a href="tel:+33240737781" className={styles.phoneLink}> 02 40 73 77 81</a> ou
             prenez rendez-vous sur
             <a href="https://www.doctolib.fr/cabinet-medical/nantes/cabinet-d-infirmieres-graslin"
                target="_blank"

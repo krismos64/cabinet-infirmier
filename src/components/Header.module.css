@@ -257,25 +257,12 @@
   display: inline-flex;
   gap: 0.5rem;
   text-shadow: 0 2px 4px rgba(218, 165, 32, 0.1);
-  animation: titleGlow 3s ease-in-out infinite;
 }
 
 .titleWord {
   display: inline-block;
-  animation: titleBounce 2s ease-in-out infinite;
 }
 
-.titleWord:nth-child(1) {
-  animation-delay: 0s;
-}
-
-.titleWord:nth-child(2) {
-  animation-delay: 0.1s;
-}
-
-.titleWord:nth-child(3) {
-  animation-delay: 0.2s;
-}
 
 @keyframes titleBounce {
   0%, 100% {
@@ -308,15 +295,12 @@
   top: -0.5rem;
   right: -1rem;
   font-size: 1rem;
-  opacity: 0;
-  transform: scale(0.5) rotate(0deg);
-  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
 }
 
 .title:hover::after {
-  opacity: 1;
-  transform: scale(1) rotate(360deg);
-  animation: sparkle 2s ease-in-out infinite;
+  transform: scale(1) rotate(0deg);
 }
 
 @keyframes titlePulse {
@@ -339,15 +323,6 @@
   }
 }
 
-.title::before {
-  content: '✨';
-  position: absolute;
-  top: -0.5rem;
-  right: -1rem;
-  font-size: 1.2rem;
-  animation: sparkle 2s ease-in-out infinite;
-  animation-delay: 1s;
-}
 
 /* Enhanced Mobile Styles */
 @media (max-width: 768px) {
@@ -405,6 +380,12 @@
     font-size: 1.1rem;
     animation: slideInFromBottom 1s ease-out 0.1s both;
   }
+
+  .title::after {
+    top: -0.3rem;
+    right: -0.8rem;
+    font-size: 0.8rem;
+  }
   
   .titleWord {
     display: inline;
@@ -460,6 +441,12 @@
   
   .title {
     font-size: 1rem;
+  }
+
+  .title::after {
+    top: -0.2rem;
+    right: -0.6rem;
+    font-size: 0.7rem;
   }
   
   .logoContainer {

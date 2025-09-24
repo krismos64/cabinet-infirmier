@@ -63,8 +63,8 @@ function InfoSections() {
             <div className={styles.cardContent}>
               <div className={styles.contactItem}>
                 <span className={styles.contactLabel}>Téléphone</span>
-                <a href="tel:+332440777381" className={`${styles.contactLink} touch-feedback`}>
-                  02 40 77 73 81
+                <a href="tel:+33240737781" className={`${styles.contactLink} touch-feedback`}>
+                  02 40 73 77 81
                 </a>
               </div>
               <div className={styles.paymentNote}>

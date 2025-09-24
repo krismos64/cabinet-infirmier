@@ -24,7 +24,7 @@ Site one-page professionnel développé en React avec CSS Modules, respectant le
 ## 📍 Informations du Cabinet
 
 - **Adresse :** 9 rue Kléber, 44000 Nantes (Hyper centre-ville - Quartier Graslin)
-- **Téléphone :** 02 40 77 73 81
+- **Téléphone :** 02 40 73 77 81
 - **Email :** infirmiere.cabinet.le.heron@gmail.com
 - **Horaires :** 7h-20h, 7j/7 (y compris jours fériés)
 - **Accessibilité :** PMR (Personnes à Mobilité Réduite)

@@ -13,7 +13,7 @@
       ],
       "description": "Cabinet infirmier professionnel au cœur de Nantes, quartier Graslin. Spécialisé dans les soins à domicile et au cabinet. Équipe d'infirmières diplômées d'État disponible 7j/7 de 7h à 20h pour pansements, injections, prélèvements, perfusions et soins post-opératoires.",
       "url": "https://cabinet-infirmier-graslin.fr",
-      "telephone": "+33240777381",
+      "telephone": "+33240737781",
       "email": "infirmiere.cabinet.le.heron@gmail.com",
       "address": {
         "@type": "PostalAddress",
@@ -283,7 +283,7 @@
           "name": "Quels quartiers de Nantes couvrez-vous pour les soins à domicile?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Nous intervenons dans tout le centre-ville de Nantes : Graslin, Dobrée, Guist'hau, Place Royale, Quai de la Fosse, Canclaux, et le nord de l'Île de Nantes. Pour les autres quartiers, nous contacter au 02 40 77 73 81."
+            "text": "Nous intervenons dans tout le centre-ville de Nantes : Graslin, Dobrée, Guist'hau, Place Royale, Quai de la Fosse, Canclaux, et le nord de l'Île de Nantes. Pour les autres quartiers, nous contacter au 02 40 73 77 81."
           }
         },
         {
@@ -299,7 +299,7 @@
           "name": "Comment prendre rendez-vous avec une infirmière à Nantes centre?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Vous pouvez prendre rendez-vous par téléphone au 02 40 77 73 81 ou via Doctolib. Pour les soins urgents, nous essayons toujours de vous recevoir dans la journée."
+            "text": "Vous pouvez prendre rendez-vous par téléphone au 02 40 73 77 81 ou via Doctolib. Pour les soins urgents, nous essayons toujours de vous recevoir dans la journée."
           }
         },
         {

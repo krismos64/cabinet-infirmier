@@ -102,9 +102,9 @@ function Header() {
               <span className={styles.doctolibIcon}>D</span>
               <span className={styles.contactText}>Doctolib</span>
             </a>
-            <a href="tel:+33240777381" className={`${styles.contactItem} ${styles.phone} touch-feedback`}>
+            <a href="tel:+33240737781" className={`${styles.contactItem} ${styles.phone} touch-feedback`}>
               <span className={styles.emoji}>📞</span>
-              <span className={styles.contactText}>02 40 77 73 81</span>
+              <span className={styles.contactText}>02 40 73 77 81</span>
             </a>
             <button 
               onClick={handleAddressClick}

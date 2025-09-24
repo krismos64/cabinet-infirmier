@@ -95,8 +95,8 @@ function MobileNavigation() {
           
           {/* Quick Actions */}
           <div className={styles.quickActions}>
-            <a 
-              href="tel:+33240777381" 
+            <a
+              href="tel:+33240737781"
               className={`${styles.quickAction} ${styles.call}`}
             >
               <span className={styles.actionIcon}>📞</span>

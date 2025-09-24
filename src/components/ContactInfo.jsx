@@ -26,8 +26,8 @@ function ContactInfo() {
               </svg>
               <h3 className={`${styles.contactTitle} fade-in stagger-3`}>Téléphone</h3>
             </div>
-            <a href="tel:+332440777381" className={`${styles.contactLink} fade-in stagger-4 touch-feedback`}>
-              02 40 77 73 81
+            <a href="tel:+33240737781" className={`${styles.contactLink} fade-in stagger-4 touch-feedback`}>
+              02 40 73 77 81
             </a>
           </div>
           <div className={`${styles.contactCard} scale-in stagger-2 hover-lift touch-feedback`}>
