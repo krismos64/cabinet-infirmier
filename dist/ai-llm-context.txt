@@ -10,7 +10,7 @@
 - Quartier : Graslin (hyper centre-ville de Nantes)
 - Site web : https://cabinet-infirmier-graslin.fr
 - Téléphone : 02 40 73 77 81
-- Email : infirmiere.cabinet.le.heron@gmail.com
+- Email : infirmiere@cabinet-infirmier-graslin.fr
 
 ### Horaires d'ouverture
 - Lundi au Dimanche : 7h00 - 20h00
