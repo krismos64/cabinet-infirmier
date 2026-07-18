@@ -27,6 +27,20 @@ jobs:
       - name: Build du projet
         run: npm run build
 
+      - name: Vérification de la cible FTP
+        env:
+          FTP_SERVER: ${{ secrets.FTP_SERVER }}
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+        run: |
+          if [ "$FTP_SERVER" != "91.108.101.109" ]; then
+            echo "FTP_SERVER ne correspond pas à l'adresse IP Hostinger attendue."
+            exit 1
+          fi
+          if [ "$FTP_USERNAME" != "u604586026" ]; then
+            echo "FTP_USERNAME ne correspond pas au compte FTP Hostinger attendu."
+            exit 1
+          fi
+
       - name: Déploiement FTP vers Hostinger
         uses: SamKirkland/FTP-Deploy-Action@8e83cea8672e3fbcbb9fdafff34debf6ae4c5f65 # v4.3.5
         with:
