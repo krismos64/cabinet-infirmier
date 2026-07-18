@@ -1,0 +1,15 @@
+# Dépendances
+node_modules/
+
+# Build (régénéré par le CI à chaque déploiement)
+dist/
+
+# macOS
+.DS_Store
+
+# Environnement
+.env
+.env.local
+
+# Logs
+*.log
