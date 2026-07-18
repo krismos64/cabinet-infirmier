@@ -36,7 +36,7 @@ jobs:
             echo "FTP_SERVER ne correspond pas à l'adresse IP Hostinger attendue."
             exit 1
           fi
-          if [ "$FTP_USERNAME" != "u604586026" ]; then
+          if [ "$FTP_USERNAME" != "u604586026.deploy" ]; then
             echo "FTP_USERNAME ne correspond pas au compte FTP Hostinger attendu."
             exit 1
           fi
