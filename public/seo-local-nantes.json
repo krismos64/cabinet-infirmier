@@ -161,63 +161,6 @@
           "opens": "07:00",
           "closes": "20:00",
           "description": "Ouvert le week-end"
-        },
-        {
-          "@type": "OpeningHoursSpecification",
-          "validFrom": "2025-01-01",
-          "validThrough": "2025-12-31",
-          "description": "Ouvert tous les jours fériés de l'année"
-        }
-      ],
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.8",
-        "bestRating": "5",
-        "ratingCount": "127",
-        "reviewCount": "89"
-      },
-      "review": [
-        {
-          "@type": "Review",
-          "author": {
-            "@type": "Person",
-            "name": "Marie L.",
-            "address": "Quartier Graslin"
-          },
-          "reviewRating": {
-            "@type": "Rating",
-            "ratingValue": "5"
-          },
-          "datePublished": "2025-09-15",
-          "reviewBody": "Excellentes infirmières, très professionnelles et douces. Je recommande vivement pour les soins à domicile dans le centre de Nantes."
-        },
-        {
-          "@type": "Review",
-          "author": {
-            "@type": "Person",
-            "name": "Pierre M.",
-            "address": "Dobrée"
-          },
-          "reviewRating": {
-            "@type": "Rating",
-            "ratingValue": "5"
-          },
-          "datePublished": "2025-09-10",
-          "reviewBody": "Prise en charge rapide pour mes pansements post-opératoires. Équipe très compétente et ponctuelle."
-        },
-        {
-          "@type": "Review",
-          "author": {
-            "@type": "Person",
-            "name": "Jeanne D.",
-            "address": "Place Royale"
-          },
-          "reviewRating": {
-            "@type": "Rating",
-            "ratingValue": "5"
-          },
-          "datePublished": "2025-09-05",
-          "reviewBody": "Cabinet très bien situé en plein centre. Personnel attentionné et soins de qualité. Merci!"
         }
       ],
       "priceRange": "€€",
@@ -262,8 +205,7 @@
         }
       ],
       "sameAs": [
-        "https://www.pagesjaunes.fr/pros/cabinet-infirmier-graslin",
-        "https://www.doctolib.fr/cabinet-infirmier-graslin"
+        "https://www.doctolib.fr/cabinet-medical/nantes/cabinet-d-infirmieres-graslin"
       ]
     },
     {

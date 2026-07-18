@@ -3,7 +3,7 @@ import styles from './FloatingElements.module.css';
 
 function FloatingElements() {
   return (
-    <div className={styles.floatingContainer}>
+    <div className={styles.floatingContainer} aria-hidden="true">
       {/* Medical Icons */}
       <div className={`${styles.floatingIcon} ${styles.icon1}`}>🏥</div>
       <div className={`${styles.floatingIcon} ${styles.icon2}`}>💊</div>

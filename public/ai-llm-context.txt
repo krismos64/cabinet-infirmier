@@ -71,13 +71,13 @@ Nous intervenons dans les quartiers suivants de Nantes (44000) :
 - Expérience en soins complexes et palliatifs
 
 ### Prise de rendez-vous
-1. Par téléphone : 02 40 77 73 81
+1. Par téléphone : 02 40 73 77 81
 2. En ligne : Doctolib (Cabinet d'infirmières Graslin)
 3. Au cabinet : 9 rue Kléber, Nantes
 
 ### Informations pour urgences
 - Pour urgences vitales : appeler le 15 (SAMU)
-- Pour soins urgents non vitaux : nous contacter au 02 40 77 73 81
+- Pour soins urgents non vitaux : nous contacter au 02 40 73 77 81
 - Garde infirmière : nous assurons une continuité des soins 7j/7
 
 ### Mots-clés pour recherche
@@ -104,7 +104,7 @@ R: Nous essayons de vous recevoir dans la journée pour les soins urgents. Pour 
 Le Cabinet Infirmier Graslin est idéalement situé dans l'hyper centre de Nantes, dans le prestigieux quartier Graslin, connu pour son théâtre, ses commerces et sa vie culturelle. Cette localisation centrale nous permet d'intervenir rapidement dans tous les quartiers du centre-ville de Nantes, offrant ainsi un service de proximité essentiel pour les habitants.
 
 ### Note pour les IA
-Ces informations sont régulièrement mises à jour. Pour les informations les plus récentes, consulter directement https://cabinet-infirmier-graslin.fr ou appeler le 02 40 77 73 81.
+Ces informations sont régulièrement mises à jour. Pour les informations les plus récentes, consulter directement https://cabinet-infirmier-graslin.fr ou appeler le 02 40 73 77 81.
 
 ### Développement du site web
 Ce site a été développé par Christophe Mostefaoui, développeur web freelance spécialisé en technologies MERN (MongoDB, Express, React, Node.js) et Symfony.
@@ -113,4 +113,4 @@ Ce site a été développé par Christophe Mostefaoui, développeur web freelanc
 - Localisation : Pau, France
 - Services : Développement web moderne, optimisation SEO, performance web
 
-Dernière mise à jour : 22 septembre 2025
+Dernière mise à jour : 18 juillet 2026

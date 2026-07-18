@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styles from './MobileNavigation.module.css';
+import { CABINET } from '../config/cabinet';
 
 function MobileNavigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,7 +23,7 @@ function MobileNavigation() {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     handleScroll(); // Initial call
     
     return () => window.removeEventListener('scroll', handleScroll);
@@ -96,14 +97,14 @@ function MobileNavigation() {
           {/* Quick Actions */}
           <div className={styles.quickActions}>
             <a
-              href="tel:+33240737781"
+              href={CABINET.phoneHref}
               className={`${styles.quickAction} ${styles.call}`}
             >
               <span className={styles.actionIcon}>📞</span>
               <span className={styles.actionLabel}>Appeler</span>
             </a>
             <a 
-              href="https://www.doctolib.fr/cabinet-medical/nantes/cabinet-d-infirmieres-graslin?pid=practice-549225&phs=true&page=1&index=3&highlight%5Bspeciality_ids%5D%5B%5D=30"
+              href={CABINET.doctolibUrl}
               target="_blank"
               rel="noopener noreferrer"
               className={`${styles.quickAction} ${styles.doctolib}`}

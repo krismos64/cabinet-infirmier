@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./ContactInfo.module.css";
+import { CABINET } from "../config/cabinet";
 
 function ContactInfo() {
   return (
@@ -31,10 +32,10 @@ function ContactInfo() {
               </h3>
             </div>
             <a
-              href="tel:+33240737781"
+              href={CABINET.phoneHref}
               className={`${styles.contactLink} fade-in stagger-4 touch-feedback`}
             >
-              02 40 73 77 81
+              {CABINET.phoneDisplay}
             </a>
           </div>
           <div

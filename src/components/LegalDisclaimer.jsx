@@ -3,10 +3,10 @@ import styles from './LegalDisclaimer.module.css';
 
 function LegalDisclaimer() {
   return (
-    <section className={`${styles.section} fade-in`}>
+    <section id="mentions-legales" className={`${styles.section} fade-in`}>
       <div className="container">
         <h3 className={styles.title}>Information légale</h3>
-        <div className={styles.disclaimerCard}>
+        <div id="protection-donnees" className={styles.disclaimerCard}>
           <svg 
             className={styles.infoIcon}
             xmlns="http://www.w3.org/2000/svg" 

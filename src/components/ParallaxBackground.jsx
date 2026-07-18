@@ -3,7 +3,7 @@ import styles from './ParallaxBackground.module.css';
 
 function ParallaxBackground() {
   const [scrollY, setScrollY] = useState(0);
-  const [windowHeight, setWindowHeight] = useState(0);
+  const [, setWindowHeight] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);

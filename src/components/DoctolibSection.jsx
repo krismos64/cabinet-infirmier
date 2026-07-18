@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './DoctolibSection.module.css';
+import { CABINET } from '../config/cabinet';
 
 function DoctolibSection() {
   return (
@@ -41,7 +42,7 @@ function DoctolibSection() {
                 Plateforme sécurisée de prise de rendez-vous médicaux
               </p>
               <a 
-                href="https://www.doctolib.fr/cabinet-medical/nantes/cabinet-d-infirmieres-graslin?pid=practice-549225&phs=true&page=1&index=3&highlight%5Bspeciality_ids%5D%5B%5D=30"
+                href={CABINET.doctolibUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`${styles.doctolibButton} scale-in stagger-6 touch-feedback`}

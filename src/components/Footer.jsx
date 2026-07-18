@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './Footer.module.css';
+import { CABINET } from '../config/cabinet';
 
 function Footer() {
   return (
@@ -11,7 +12,7 @@ function Footer() {
           </p>
           <div className={styles.links}>
             <a 
-              href="https://www.doctolib.fr/cabinet-medical/nantes/cabinet-d-infirmieres-graslin?pid=practice-549225&phs=true&page=1&index=3&highlight%5Bspeciality_ids%5D%5B%5D=30" 
+              href={CABINET.doctolibUrl}
               className={styles.link}
               target="_blank"
               rel="noopener noreferrer"

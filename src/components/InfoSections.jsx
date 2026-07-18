@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './InfoSections.module.css';
+import { CABINET } from '../config/cabinet';
 
 function InfoSections() {
   return (
@@ -63,8 +64,8 @@ function InfoSections() {
             <div className={styles.cardContent}>
               <div className={styles.contactItem}>
                 <span className={styles.contactLabel}>Téléphone</span>
-                <a href="tel:+33240737781" className={`${styles.contactLink} touch-feedback`}>
-                  02 40 73 77 81
+                <a href={CABINET.phoneHref} className={`${styles.contactLink} touch-feedback`}>
+                  {CABINET.phoneDisplay}
                 </a>
               </div>
               <div className={styles.paymentNote}>

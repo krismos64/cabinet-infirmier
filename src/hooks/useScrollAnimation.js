@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 
 export const useScrollAnimation = () => {
   useEffect(() => {
+    const staggerTimers = [];
     const observerOptions = {
       threshold: 0.1,
       rootMargin: '0px 0px -30px 0px'
@@ -15,9 +16,10 @@ export const useScrollAnimation = () => {
           // Add stagger animations for child elements
           const staggerElements = entry.target.querySelectorAll('[class*="stagger-"]');
           staggerElements.forEach((element, index) => {
-            setTimeout(() => {
+            const timer = setTimeout(() => {
               element.classList.add('visible');
             }, index * 100);
+            staggerTimers.push(timer);
           });
         }
       });
@@ -40,12 +42,14 @@ export const useScrollAnimation = () => {
 
     // Add loading animation for the page
     document.body.style.opacity = '0';
-    setTimeout(() => {
+    const loadingTimer = setTimeout(() => {
       document.body.style.transition = 'opacity 0.5s ease-in-out';
       document.body.style.opacity = '1';
     }, 100);
 
     return () => {
+      clearTimeout(loadingTimer);
+      staggerTimers.forEach(clearTimeout);
       animationClasses.forEach(className => {
         const elements = document.querySelectorAll(className);
         elements.forEach((element) => {

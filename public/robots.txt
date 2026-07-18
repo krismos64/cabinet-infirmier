@@ -1,5 +1,5 @@
 # Robots.txt pour Cabinet Infirmier Graslin Nantes
-# https://cabinet-infirmier-graslin.netlify.app/
+# https://cabinet-infirmier-graslin.fr/
 
 # Autoriser tous les robots d'indexation
 User-agent: *
@@ -16,16 +16,41 @@ User-agent: Bingbot
 Allow: /
 Crawl-delay: 0
 
+# Autoriser les ressources factuelles destinées aux moteurs et assistants
+User-agent: GPTBot
+Allow: /
+Allow: /llms.txt
+Allow: /ai-llm-context.txt
+Allow: /seo-local-nantes.json
+
+User-agent: ChatGPT-User
+Allow: /
+Allow: /llms.txt
+Allow: /ai-llm-context.txt
+Allow: /seo-local-nantes.json
+
+User-agent: ClaudeBot
+Allow: /
+Allow: /llms.txt
+Allow: /ai-llm-context.txt
+Allow: /seo-local-nantes.json
+
+User-agent: PerplexityBot
+Allow: /
+Allow: /llms.txt
+Allow: /ai-llm-context.txt
+Allow: /seo-local-nantes.json
+
 # Bloquer l'accès aux répertoires sensibles
+User-agent: *
 Disallow: /admin/
 Disallow: /node_modules/
 Disallow: /src/
 Disallow: /.env
-Disallow: /*.json$
 Disallow: /*.lock$
 
 # Sitemap
-Sitemap: https://cabinet-infirmier-graslin.netlify.app/sitemap.xml
+Sitemap: https://cabinet-infirmier-graslin.fr/sitemap.xml
 
 # Directives spécifiques pour les images
 User-agent: Googlebot-Image

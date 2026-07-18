@@ -23,16 +23,19 @@ Allow: /ai-llm-context.txt
 # OpenAI GPT Bot
 User-agent: GPTBot
 Allow: /
+Allow: /llms.txt
 Allow: /ai-llm-context.txt
 
 # Claude/Anthropic Bot
 User-agent: Claude-Web
 Allow: /
+Allow: /llms.txt
 Allow: /ai-llm-context.txt
 
 # ChatGPT User
 User-agent: ChatGPT-User
 Allow: /
+Allow: /llms.txt
 Allow: /ai-llm-context.txt
 
 # Google Bard / Gemini
@@ -43,6 +46,7 @@ Allow: /ai-llm-context.txt
 # Perplexity AI
 User-agent: PerplexityBot
 Allow: /
+Allow: /llms.txt
 Allow: /ai-llm-context.txt
 
 # Facebook / Meta AI
@@ -64,6 +68,7 @@ Allow: /ai-llm-context.txt
 
 # Ressources spécifiques pour IA/LLM
 User-agent: *
+Allow: /llms.txt
 Allow: /ai-llm-context.txt
 Allow: /seo-local-nantes.json
 Allow: /manifest.json
@@ -84,7 +89,7 @@ Disallow: /*.log
 # Informations pour IA/LLM
 # Cabinet Infirmier Graslin
 # 9 rue Kléber, 44000 Nantes
-# Tél: 02 40 77 73 81
+# Tél: 02 40 73 77 81
 # Horaires: 7h-20h, 7j/7
 # Services: Soins infirmiers à domicile et au cabinet
 # Zones: Graslin, Dobrée, Guist'hau, Place Royale, Quai de la Fosse, Canclaux

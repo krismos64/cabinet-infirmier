@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './CTA.module.css';
+import { CABINET } from '../config/cabinet';
 
 function CTA() {
   return (
@@ -16,7 +17,7 @@ function CTA() {
             </p>
           </div>
           <div className={styles.ctaActions}>
-            <a href="tel:+332440777381" className={`${styles.ctaButton} scale-in stagger-3 touch-feedback`}>
+            <a href={CABINET.phoneHref} className={`${styles.ctaButton} scale-in stagger-3 touch-feedback`}>
               <svg 
                 className={styles.ctaIcon}
                 xmlns="http://www.w3.org/2000/svg" 

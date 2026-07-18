@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import Lottie from 'lottie-react';
+import Lottie from './LazyLottie';
 import styles from './Header.module.css';
+import { CABINET } from '../config/cabinet';
 
 function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -12,7 +13,7 @@ function Header() {
       setScrolled(isScrolled);
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -20,7 +21,10 @@ function Header() {
     // Charger l'animation Lottie seulement après un délai (non critique)
     const loadAnimation = () => {
       fetch('/assets/lottie/Medic.json')
-        .then(response => response.json())
+        .then(response => {
+          if (!response.ok) throw new Error(`HTTP ${response.status}`);
+          return response.json();
+        })
         .then(data => setNurseAnimation(data))
         .catch(error => console.error('Erreur lors du chargement de l\'animation:', error));
     };
@@ -31,14 +35,12 @@ function Header() {
   }, []);
 
   const handleAddressClick = () => {
-    const address = "9 rue Kléber, 44000 Nantes, France";
+    const address = CABINET.address;
     const encodedAddress = encodeURIComponent(address);
     
     // Détecter l'appareil pour proposer les bonnes applications
     const isMobile = /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
     const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
-    const isAndroid = /Android/.test(navigator.userAgent);
-    
     if (isMobile) {
       // Créer une boîte de dialogue pour choisir l'app GPS
       const choice = window.confirm(
@@ -84,16 +86,16 @@ function Header() {
                 />
               )}
             </div>
-            <h1 className={styles.title}>
+            <div className={styles.title}>
               <span className={styles.titleWord}>Cabinet</span>
               <span className={styles.titleWord}>Infirmier</span>
               <span className={styles.titleWord}>Graslin</span>
-            </h1>
+            </div>
           </div>
           
           <div className={styles.contactInfo}>
             <a 
-              href="https://www.doctolib.fr/cabinet-medical/nantes/cabinet-d-infirmieres-graslin?pid=practice-549225&phs=true&page=1&index=3&highlight%5Bspeciality_ids%5D%5B%5D=30"
+              href={CABINET.doctolibUrl}
               target="_blank"
               rel="noopener noreferrer"
               className={`${styles.contactItem} ${styles.doctolib} touch-feedback`}
@@ -102,9 +104,9 @@ function Header() {
               <span className={styles.doctolibIcon}>D</span>
               <span className={styles.contactText}>Doctolib</span>
             </a>
-            <a href="tel:+33240737781" className={`${styles.contactItem} ${styles.phone} touch-feedback`}>
+            <a href={CABINET.phoneHref} className={`${styles.contactItem} ${styles.phone} touch-feedback`}>
               <span className={styles.emoji}>📞</span>
-              <span className={styles.contactText}>02 40 73 77 81</span>
+              <span className={styles.contactText}>{CABINET.phoneDisplay}</span>
             </a>
             <button 
               onClick={handleAddressClick}

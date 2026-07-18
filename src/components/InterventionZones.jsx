@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Lottie from 'lottie-react';
+import Lottie from './LazyLottie';
 import styles from './InterventionZones.module.css';
 
 function InterventionZones() {
@@ -8,7 +8,10 @@ function InterventionZones() {
   useEffect(() => {
     // Charger l'animation Lottie depuis le dossier public
     fetch('/assets/lottie/map search.json')
-      .then(response => response.json())
+      .then(response => {
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        return response.json();
+      })
       .then(data => setMapAnimation(data))
       .catch(error => console.error('Erreur lors du chargement de l\'animation:', error));
   }, []);

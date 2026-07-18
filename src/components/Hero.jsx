@@ -1,16 +1,22 @@
-import Lottie from "lottie-react";
+import Lottie from "./LazyLottie";
 import React, { useEffect, useState } from "react";
 import DoctolibSection from "./DoctolibSection";
 import styles from "./Hero.module.css";
+import { CABINET } from "../config/cabinet";
 
 function Hero() {
   const [nurseAnimation, setNurseAnimation] = useState(null);
 
   useEffect(() => {
+    let fallbackTimer;
+
     // Charger l'animation Lottie avec Intersection Observer pour lazy loading
     const loadAnimation = () => {
       fetch("/assets/lottie/mynurse.json")
-        .then((response) => response.json())
+        .then((response) => {
+          if (!response.ok) throw new Error(`HTTP ${response.status}`);
+          return response.json();
+        })
         .then((data) => setNurseAnimation(data))
         .catch((error) =>
           console.error("Erreur lors du chargement de l'animation:", error)
@@ -21,7 +27,7 @@ function Hero() {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting && !nurseAnimation) {
+          if (entry.isIntersecting) {
             loadAnimation();
             observer.disconnect();
           }
@@ -37,14 +43,17 @@ function Hero() {
       observer.observe(animationSection);
     } else {
       // Fallback avec délai si l'élément n'est pas encore disponible
-      setTimeout(loadAnimation, 2000);
+      fallbackTimer = setTimeout(loadAnimation, 2000);
     }
 
-    return () => observer.disconnect();
-  }, [nurseAnimation]);
+    return () => {
+      observer.disconnect();
+      clearTimeout(fallbackTimer);
+    };
+  }, []);
 
   const handleMapClick = () => {
-    const address = "9 rue Kléber, 44000 Nantes, France";
+    const address = CABINET.address;
     const encodedAddress = encodeURIComponent(address);
 
     // Détecter l'appareil pour proposer les bonnes applications
@@ -53,8 +62,6 @@ function Hero() {
         navigator.userAgent
       );
     const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
-    const isAndroid = /Android/.test(navigator.userAgent);
-
     if (isMobile) {
       // Créer une boîte de dialogue pour choisir l'app GPS
       const choice = window.confirm(
@@ -119,7 +126,7 @@ function Hero() {
               </p>
 
               <div className={styles.heroPhone}>
-                <a href="tel:+33240737781" className={styles.phoneButton}>
+                <a href={CABINET.phoneHref} className={styles.phoneButton}>
                   <svg
                     className={styles.phoneIcon}
                     viewBox="0 0 24 24"
@@ -129,7 +136,7 @@ function Hero() {
                   >
                     <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
                   </svg>
-                  <span className={styles.phoneText}>02 40 73 77 81</span>
+                  <span className={styles.phoneText}>{CABINET.phoneDisplay}</span>
                 </a>
               </div>
             </div>

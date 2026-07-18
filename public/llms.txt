@@ -1,0 +1,13 @@
+# Cabinet Infirmier Graslin
+
+> Site officiel du Cabinet Infirmier Graslin, situé à Nantes.
+
+## Site officiel
+
+- [Cabinet Infirmier Graslin](https://cabinet-infirmier-graslin.fr/): informations sur les soins, les horaires, le contact et les zones d'intervention.
+
+## Ressources
+
+- [Sitemap](https://cabinet-infirmier-graslin.fr/sitemap.xml): URL canonique du site.
+- [Données structurées](https://cabinet-infirmier-graslin.fr/seo-local-nantes.json): informations factuelles structurées du cabinet.
+- [Contexte complémentaire](https://cabinet-infirmier-graslin.fr/ai-llm-context.txt): contexte factuel complémentaire destiné aux systèmes d'information.

@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./SEOLocalNantes.module.css";
+import { CABINET } from "../config/cabinet";
 
 function SEOLocalNantes() {
   return (
@@ -8,7 +9,7 @@ function SEOLocalNantes() {
       aria-label="Zones d'intervention à Nantes"
     >
       <div className="container">
-        <h2 className={styles.title}>
+        <h2 id="seo-local-title" className={styles.title}>
           Infirmières à Domicile dans tous les Quartiers de Nantes Centre
         </h2>
 
@@ -67,13 +68,13 @@ function SEOLocalNantes() {
           <h3>Besoin d'une Infirmière à Domicile à Nantes ?</h3>
           <p className={styles.ctaText}>
             Contactez le <strong>Cabinet Infirmier Graslin</strong> au
-            <a href="tel:+33240737781" className={styles.phoneLink}>
+            <a href={CABINET.phoneHref} className={styles.phoneLink}>
               {" "}
-              02 40 73 77 81
+              {CABINET.phoneDisplay}
             </a>{" "}
             ou prenez rendez-vous sur
             <a
-              href="https://www.doctolib.fr/cabinet-medical/nantes/cabinet-d-infirmieres-graslin"
+              href={CABINET.doctolibUrl}
               target="_blank"
               rel="noopener noreferrer"
               className={styles.doctolibLink}
